@@ -1,56 +1,57 @@
 .container {
-	width: 960px;
+    width: 960px;
 }
 header {
-	background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
 }
 header h1 .logo {
-	display: none;
+    display: none;
 }
 header h1 .logo.fallback {
-	display: inline;
+    display: inline;
 }
 #loading {
-	display: none;
+    display: none;
 }
 #hero:after {
-	display: block !important;
-	height: 475px !important;
-	background: rgb(15,15,15);
+    display: block !important;
+    height: 475px !important;
+    background: rgb(15, 15, 15);
 }
 #hero .container {
-	height: 475px !important;
-	opacity: 1 !important;
+    height: 475px !important;
+    opacity: 1 !important;
 }
 #hero .container .intro {
-	width: 960px;
-	bottom: 100px;
-	padding-left: 0;
-	border-left: none;
-	overflow: visible;
-	margin-bottom: 0;
+    width: 960px;
+    bottom: 100px;
+    padding-left: 0;
+    border-left: none;
+    overflow: visible;
+    margin-bottom: 0;
 }
 #hero .container .intro .slide-in {
-	width: 960px;
-	left: 0;
+    width: 960px;
+    left: 0;
 }
 #hero .container #hero-photo {
-	display: none;
+    display: none;
 }
 main {
-	width: 960px;
-	margin: 0 auto;
+    width: 960px;
+    margin: 0 auto;
 }
-main #portfolio li, main #portfolio li a {
-	height: 180px;
-	margin-top: 0 !important;
+main #portfolio li,
+main #portfolio li a {
+    height: 180px;
+    margin-top: 0 !important;
 }
 main #portfolio li a .title {
-	background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
 }
 #project .project-hero .title {
-	background-color: rgb(15,15,15);
+    background-color: rgb(15, 15, 15);
 }
 .tooltip {
-	display: none !important;
+    display: none !important;
 }
