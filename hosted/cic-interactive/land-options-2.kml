@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>north-land-1.kml</name>
+	<Style id="sn_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin20</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin20">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin20">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Elwood North Area 1</name>
+		<description><![CDATA[4.93± Acres<br>
+<a href="cic-interactive/5-acre-next-to-Neovia-CONCEPTwLot62.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin2</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.13779006977022,41.45026651569638,0 -88.13645429918438,41.45028902254391,0 -88.13645697014515,41.451051670406,0 -88.13645984982301,41.45133394249809,0 -88.13647458361586,41.4514123235463,0 -88.13650088915116,41.45147458758503,0 -88.13657184228821,41.45155562588777,0 -88.13665293212057,41.45161133985744,0 -88.13688268757242,41.4517683517135,0 -88.13696715686261,41.45182153311582,0 -88.13702797480991,41.45188484418337,0 -88.13705838382049,41.45195575254247,0 -88.13708203534351,41.45203425822222,0 -88.13709555077767,41.45225711321125,0 -88.13786197778802,41.45224987636383,0 -88.13779006977022,41.45026651569638,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Elwood North Area 2</name>
+		<description><![CDATA[13± Acres<br>
+<a href="cic-interactive/Autobahn-Teal-Lots-w-ACCESS.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin4</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.13699490522302,41.45435818764295,0 -88.13707770887041,41.45599273408854,0 -88.13698587108267,41.45599523607638,0 -88.13703910410221,41.45750252889108,0 -88.13803577454996,41.45749079988392,0 -88.13805701610418,41.45671597071453,0 -88.14092631556565,41.45665843610818,0 -88.1409344958635,41.45473375400749,0 -88.13795132969645,41.45471130489819,0 -88.13793806761799,41.45434934694019,0 -88.13699490522302,41.45435818764295,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Elwood North Area 3</name>
+		<description><![CDATA[7.35± Acres<br>
+<a href="cic-interactive/CY-Site-plan -North-of-Saddle-Creek.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin5</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.13516687796111,41.44575910165753,0 -88.13554551343482,41.44570162046685,0 -88.13615703829026,41.44561873115671,0 -88.13655266687212,41.44558705433563,0 -88.13811298510056,41.4455297256133,0 -88.13821138561386,41.4454344721911,0 -88.13806889833283,41.44431088834141,0 -88.13512575606718,41.444389351014,0 -88.13516687796111,41.44575910165753,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Elwood North Area 4</name>
+		<description><![CDATA[463.55± Acres<br>
+<a href="cic-interactive/CIC-Joliet-East-Conceptual-Plan.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin1</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.09560201006694,41.45849622983499,0 -88.11323708836103,41.45807141903675,0 -88.11317058119889,41.45598425366117,0 -88.11311800024428,41.44604475326938,0 -88.1130408937007,41.44373016879685,0 -88.10815142296457,41.44375641963443,0 -88.10789672552828,41.43770067972402,0 -88.10072425681052,41.43791808420711,0 -88.09560201006694,41.45849622983499,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Elwood North Area 5</name>
+		<description><![CDATA[x± Acres<br>
+<a href="cic-interactive/file.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin0</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.12290062219738,41.4666190829027,0 -88.12276593419277,41.46521740842694,0 -88.1192184837774,41.46532347936513,0 -88.11908929028947,41.46535307050431,0 -88.11897050942282,41.46541349290492,0 -88.11889483248416,41.46552674735649,0 -88.11885206517734,41.46564287233025,0 -88.11852916180895,41.46683220803892,0 -88.12290062219738,41.4666190829027,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Joliet South Area 1</name>
+		<description><![CDATA[11.5± Acres<br>
+<a href="cic-interactive/Plan-Watertower-v2.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin10</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.12071017300536,41.40702314250274,0 -88.12043813378236,41.40690581129861,0 -88.11977845704337,41.40639569327826,0 -88.11950643764357,41.40604882038729,0 -88.11877203506269,41.40469705447635,0 -88.11854082913166,41.40445730361905,0 -88.11822121319237,41.40426855749275,0 -88.11796959795305,41.40417162957457,0 -88.1180169473765,41.40742091346831,0 -88.12071696682733,41.40735980904358,0 -88.12071017300536,41.40702314250274,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Joliet South Area 2</name>
+		<description><![CDATA[79± Acres<br>
+<a href="cic-interactive/5-acre-next-to-Neovia-CONCEPTwLot62.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin3</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.128162198734,41.39609985288006,0 -88.12893156421796,41.39425320807931,0 -88.12786084393042,41.39292086357248,0 -88.11780062793557,41.39326254181694,0 -88.1178245751988,41.39635024526728,0 -88.128162198734,41.39609985288006,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>Joliet South Area 3</name>
+		<description><![CDATA[250± Acres<br>
+<a href="cic-interactive/Master-Plan-250-Acre.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.11010412818592,41.39687897324414,0 -88.10873629710318,41.39581504374134,0 -88.10825255736022,41.39547708065624,0 -88.10518222206603,41.39786702969069,0 -88.10241337608744,41.39585167530035,0 -88.10550036998897,41.39351184591484,0 -88.0995112842904,41.3936234372349,0 -88.09964350656425,41.39721528724982,0 -88.09709088789242,41.39727732402585,0 -88.0973884358209,41.40419827708715,0 -88.10459660830158,41.4040619098096,0 -88.10664924393697,41.40263547291596,0 -88.1066166296484,41.39944412030847,0 -88.11042066720523,41.39931944340999,0 -88.11203931889136,41.39778024740714,0 -88.11010412818592,41.39687897324414,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

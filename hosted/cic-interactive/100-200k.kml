@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>100-200k.kml</name>
+	<Style id="pib135">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<color>ff88b100</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="prospect-industrial-buildings">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#pib135</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#pib135</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>100,000 - 200,000 SF (can drilldown)</name>
+		<open>1</open>
+		<Placemark>
+			<name>Building - Lot 23</name>
+			<styleUrl>#prospect-industrial-buildings</styleUrl>
+			<Polygon>
+				<extrude>1</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-88.10783194621555,41.4505039603457,13 -88.10782502018805,41.45017507803064,13 -88.10550713499291,41.45020631145634,13 -88.10551624710004,41.45053452449064,13 -88.10783194621555,41.4505039603457,13 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

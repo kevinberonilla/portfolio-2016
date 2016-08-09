@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>1,000,000+ SF (can drilldown)</name>
+	<GroundOverlay>
+		<name>Prop-Building-3-1,036,800</name>
+		<Icon>
+			<href>http://dev.freydesigngroup.com/cic/cic-interactive/buildings/je-10-1000-plus.png</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>41.44718086423017</north>
+			<south>41.437881901735</south>
+			<east>-88.09834003877056</east>
+			<west>-88.10676585457381</west>
+			<rotation>1.885479056467309</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Prop-Building-2-1,006,115</name>
+		<Icon>
+			<href>http://dev.freydesigngroup.com/cic/cic-interactive/buildings/je-09-1000-plus.png</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>41.44755762803305</north>
+			<south>41.43778773806692</south>
+			<east>-88.10441241944939</east>
+			<west>-88.10813151418154</west>
+			<rotation>1.873973602810423</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Prop-Building-1-1,006,115</name>
+		<Icon>
+			<href>http://dev.freydesigngroup.com/cic/cic-interactive/buildings/je-02-1000-plus.png</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>41.45813058486559</north>
+			<south>41.45118569204744</south>
+			<east>-88.09579454502459</east>
+			<west>-88.10852126988271</west>
+			<rotation>1.658994892788152</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+	<GroundOverlay>
+		<name>Prop-Building-Pad-9-1,383,000</name>
+		<Icon>
+			<href>http://dev.freydesigngroup.com/cic/cic-interactive/buildings/pad-9.png</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>41.39742728782455</north>
+			<south>41.39305889981762</south>
+			<east>-88.11659555833707</east>
+			<west>-88.12793619131219</west>
+			<rotation>1.718441764394475</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+</Folder>
+</kml>

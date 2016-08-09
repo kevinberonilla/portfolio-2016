@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /images/hero-photo.png
+Disallow: /hosted

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>north-land-1.kml</name>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<width>0</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>4ddd9a00</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>4.93± Acres</name>
+		<description><![CDATA[Proposed container yard<br>
+<a href="cic-interactive/5-acre-next-to-Neovia-CONCEPTwLot62.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.13779006977022,41.45026651569638,0 -88.13645429918438,41.45028902254391,0 -88.13645697014515,41.451051670406,0 -88.13645984982301,41.45133394249809,0 -88.13647458361586,41.4514123235463,0 -88.13650088915116,41.45147458758503,0 -88.13657184228821,41.45155562588777,0 -88.13665293212057,41.45161133985744,0 -88.13688268757242,41.4517683517135,0 -88.13696715686261,41.45182153311582,0 -88.13702797480991,41.45188484418337,0 -88.13705838382049,41.45195575254247,0 -88.13708203534351,41.45203425822222,0 -88.13709555077767,41.45225711321125,0 -88.13786197778802,41.45224987636383,0 -88.13779006977022,41.45026651569638,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>13± Acres</name>
+		<description><![CDATA[Land site or container yard<br>
+<a href="cic-interactive/Autobahn-Teal-Lots-w-ACCESS.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.13699490522302,41.45435818764295,0 -88.13707770887041,41.45599273408854,0 -88.13698587108267,41.45599523607638,0 -88.13703910410221,41.45750252889108,0 -88.13803577454996,41.45749079988392,0 -88.13805701610418,41.45671597071453,0 -88.14092631556565,41.45665843610818,0 -88.1409344958635,41.45473375400749,0 -88.13795132969645,41.45471130489819,0 -88.13793806761799,41.45434934694019,0 -88.13699490522302,41.45435818764295,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>7.35± Acres</name>
+		<description><![CDATA[Proposed container yard<br>
+<a href="cic-interactive/CY-Site-plan -North-of-Saddle-Creek.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.13516687796111,41.44575910165753,0 -88.13554551343482,41.44570162046685,0 -88.13615703829026,41.44561873115671,0 -88.13655266687212,41.44558705433563,0 -88.13811298510056,41.4455297256133,0 -88.13821138561386,41.4454344721911,0 -88.13806889833283,41.44431088834141,0 -88.13512575606718,41.444389351014,0 -88.13516687796111,41.44575910165753,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>463.55± Acres</name>
+		<description><![CDATA[100,000–1.5M+ SF sites<br>
+<a href="cic-interactive/CIC-Joliet-East-Conceptual-Plan.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.09560201006694,41.45849622983499,0 -88.11092074212605,41.4581221660172,0 -88.11086042927106,41.45390845197768,0 -88.11501191167962,41.45383415680212,0 -88.11492515403903,41.4509418515104,0 -88.11227484543046,41.45098713213352,0 -88.11212208347452,41.4460960798285,0 -88.11311917590874,41.44607113385239,0 -88.11311807500167,41.44604458522966,0 -88.1130408937007,41.44373016879685,0 -88.10815142296457,41.44375641963443,0 -88.10789672552828,41.43770067972402,0 -88.10072425681052,41.43791808420711,0 -88.09560201006694,41.45849622983499,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>16.45± Acres</name>
+		<description><![CDATA[Proposed container yard<br>
+<a href="pdf/NWC-Schweitzer-and-Patterson.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.12290062219738,41.4666190829027,0 -88.12276593419277,41.46521740842694,0 -88.1192184837774,41.46532347936513,0 -88.11908929028947,41.46535307050431,0 -88.11897050942282,41.46541349290492,0 -88.11889483248416,41.46552674735649,0 -88.11885206517734,41.46564287233025,0 -88.11852916180895,41.46683220803892,0 -88.12290062219738,41.4666190829027,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>11.5± Acres</name>
+		<description><![CDATA[For sale or lease<br>
+<a href="cic-interactive/Plan-Watertower-v2.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.12071017300536,41.40702314250274,0 -88.12043813378236,41.40690581129861,0 -88.11977845704337,41.40639569327826,0 -88.11950643764357,41.40604882038729,0 -88.11877203506269,41.40469705447635,0 -88.11854082913166,41.40445730361905,0 -88.11822121319237,41.40426855749275,0 -88.11796959795305,41.40417162957457,0 -88.1180169473765,41.40742091346831,0 -88.12071696682733,41.40735980904358,0 -88.12071017300536,41.40702314250274,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>79± Acres</name>
+		<description><![CDATA[Dual UP & BNSF Rail-Service<br>
+<a href="pdf/CIC-9.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.128162198734,41.39609985288006,0 -88.12893156421796,41.39425320807931,0 -88.12786084393042,41.39292086357248,0 -88.11780062793557,41.39326254181694,0 -88.1178245751988,41.39635024526728,0 -88.128162198734,41.39609985288006,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark>
+		<name>250± Acres (divisible)</name>
+		<description><![CDATA[For sale or lease<br>
+<a href="cic-interactive/Master-Plan-250-Acre.pdf" target="_blank">View Site Plan</a>]]></description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-88.11055680616758,41.39709118160838,0 -88.10993609857751,41.3967342193653,0 -88.10940241339652,41.39634013859904,0 -88.10873629710318,41.39581504374134,0 -88.10822512387236,41.3954060913855,0 -88.10518222206603,41.39786702969069,0 -88.10241337608744,41.39585167530035,0 -88.10541274091476,41.39351997191529,0 -88.10490284636742,41.39344617087244,0 -88.10453856440299,41.39342095489184,0 -88.10385496938812,41.39343568442869,0 -88.09942133431292,41.39359408708298,0 -88.09963816953358,41.39720897142721,0 -88.09733943005894,41.39730350767853,0 -88.09748982986409,41.40162735614948,0 -88.09747081441084,41.40218838599708,0 -88.09713021635392,41.40217980068985,0 -88.09713194842703,41.40419549916565,0 -88.10459660830158,41.4040619098096,0 -88.10664924393697,41.40263547291596,0 -88.1066166296484,41.39944412030847,0 -88.11042066720523,41.39931944340999,0 -88.11203931889136,41.39778024740714,0 -88.11055680616758,41.39709118160838,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

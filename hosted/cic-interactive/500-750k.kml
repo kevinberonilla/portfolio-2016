@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>500-750k.kml</name>
+	<StyleMap id="prospect-industrial-buildings">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#pib135</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#pib135</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="pib135">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<color>ff88b100</color>
+			<outline>0</outline>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>500,000 - 750,000 SF (can drilldown)</name>
+		<open>1</open>
+		<Placemark>
+			<name>Building - Lot 20</name>
+			<styleUrl>#prospect-industrial-buildings</styleUrl>
+			<Polygon>
+				<extrude>1</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-88.103048611476,41.44177643240259,13 -88.10751918223883,41.43872228212987,13 -88.1067557486929,41.4380909015761,13 -88.10229453385472,41.44118611788699,13 -88.103048611476,41.44177643240259,13 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>Building - Lot 22</name>
+			<styleUrl>#prospect-industrial-buildings</styleUrl>
+			<Polygon>
+				<extrude>1</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-88.10635564590899,41.44623693327469,13 -88.1063032061566,41.44542905781213,13 -88.09931712852558,41.44557833668033,13 -88.09934976084701,41.44638597051323,13 -88.10635564590899,41.44623693327469,13 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>Building - Lot 29</name>
+			<styleUrl>#prospect-industrial-buildings</styleUrl>
+			<Polygon>
+				<extrude>1</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-88.11385305518314,41.45307737609988,13 -88.11378719600542,41.4517232368832,13 -88.10913888653515,41.4518415512028,13 -88.10920552064329,41.45323298012583,13 -88.11385305518314,41.45307737609988,13 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>Building - Lot 30</name>
+			<styleUrl>#prospect-industrial-buildings</styleUrl>
+			<Polygon>
+				<extrude>1</extrude>
+				<tessellate>1</tessellate>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-88.110675342557,41.45567207541389,13 -88.11062715560348,41.45459251461896,13 -88.10552384996296,41.45473071628007,13 -88.105585343942,41.4558383290523,13 -88.110675342557,41.45567207541389,13 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>500,000 - 750,000 SF (can drilldown)</name>
+	<GroundOverlay>
+		<name>Prop-Building-7-732,780</name>
+		<Icon>
+			<href>http://dev.freydesigngroup.com/cic/cic-interactive/buildings/je-04-500-750.png</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>41.45391610493203</north>
+			<south>41.45101042102708</south>
+			<east>-88.10605989216323</east>
+			<west>-88.11497056643012</west>
+			<rotation>1.237779474550993</rotation>
+		</LatLonBox>
+	</GroundOverlay>
+</Folder>
+</kml>
