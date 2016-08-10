@@ -1,4 +1,4 @@
-<?php $resourceVersion = '1.18'; ?>
+<?php $resourceVersion = '1.19'; ?>
 <!doctype html>
 <html>
 
@@ -66,11 +66,14 @@
             <li class="project web">
                 <a href="#!/100-years-of-pier-website"><img src="images/100-years-of-pier-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">100 Years of Pier Website (2016)</span></a>
             </li>
+            <li class="project web">
+                <a href="#!/appiphony-website"><img src="images/appiphony-lightning-js/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Appiphony Lightning JS Library (2015)</span></a>
+            </li>
             <li class="project gd web">
                 <a href="#!/appiphony-website"><img src="images/appiphony-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Appiphony Website (2015)</span></a>
             </li>
             <li class="project web">
-                <a href="#!/webegin-visualforce"><img src="images/webegin-visualforce/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Webegin for Visualforce (2015)</span></a>
+                <a href="#!/webegin-visualforce-framework"><img src="images/webegin-visualforce-framework/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Webegin for Visualforce Framework (2015)</span></a>
             </li>
             <li class="project web">
                 <a href="#!/navy-pier-website"><img src="images/navy-pier-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Navy Pier Website (2015)</span></a>

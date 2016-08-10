@@ -331,7 +331,7 @@ header .mobile-menu.active:after {
     overflow: hidden;
 }
 #hero .container .intro .drop-down .options.open {
-    height: 200px;
+    height: 188px;
     padding: 6px 0 8px 0;
 }
 #hero .container .intro .drop-down .options li {
@@ -339,8 +339,8 @@ header .mobile-menu.active:after {
     font-size: 22px;
     line-height: 22px;
     color: #fff;
-    padding: 4px 16px;
-    margin: 6px 0;
+    padding: 6px 16px;
+    margin: 0;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
@@ -778,7 +778,7 @@ footer {
         width: 210px;
     }
     #hero .container .intro .drop-down .options.open {
-        height: 190px;
+        height: 178px;
     }
     #hero .container .intro .drop-down .options li {
         font-size: 20px;
@@ -833,13 +833,13 @@ footer {
         top: 38px;
     }
     #hero .container .intro .drop-down .options.open {
-        height: 140px;
+        height: 126px;
         padding: 6px 0 8px 0;
     }
     #hero .container .intro .drop-down .options li {
         font-size: 14px;
         line-height: 14px;
-        padding: 2px 14px;
+        padding: 4px 14px;
     }
     #hero .container #hero-photo {
         width: 360px;

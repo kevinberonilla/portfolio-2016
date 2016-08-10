@@ -9,7 +9,7 @@
     <div class="notes">
         <p><strong>Client:</strong> Jones Lang Lasalle (JLL)</p>
         <p><strong>Involvement:</strong> Video Editing, Animation, Partial 3D Modeling</p>
-        <p><strong>Credits:</strong> Art Direction by <a href="http://freydesigngroup.com" target="_blank">Frey Design</a></p>
+        <p><strong>Credits:</strong> Art Direction by <a href="http://freydesigngroup.com" target="_blank">Jason Frey</a></p>
     </div>
     <div class="videos">
         <div class='embed-container'>

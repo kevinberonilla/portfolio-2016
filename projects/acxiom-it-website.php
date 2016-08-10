@@ -9,7 +9,7 @@
     <div class="notes">
         <p><strong>Client:</strong> Acxiom</p>
         <p><strong>Involvement:</strong> Original Concept, Graphic Design, Partial Front-End Development, Partial WordPress Development</p>
-        <p><strong>Credits:</strong> Art Direction by <a href="http://freydesigngroup.com" target="_blank">Frey Design</a>, Front-End Development by Nerijus Baniukevicius, Wordpress Development by <a href="http://synthesisworld.com" target="_blank">Synthesis World</a></p>
+        <p><strong>Credits:</strong> Art Direction by <a href="http://freydesigngroup.com" target="_blank">Jason Frey</a>, Front-End Development by Nerijus Baniukevicius, Wordpress Development by <a href="http://synthesisworld.com" target="_blank">Synthesis World</a></p>
         <?php /*<p><strong>Live Site:</strong> <a href="http://acxiomit.com" target="_blank">acxiomit.com</a></p>*/ ?>
     </div>
     <div class="images">
