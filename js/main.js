@@ -1,7 +1,8 @@
 /* ----------------------------------------
 Global Variables
 ---------------------------------------- */
-var loading;
+var documentBody = $(document.body),
+    loading;
 
 /* ----------------------------------------
 Page Refresh Functions
@@ -17,7 +18,7 @@ $(document).ready(function() {
 	$(window).on('beforeunload', function() {
 		if (!contactClicked) { // Ignore onbeforeload event if contact button is clicked
 			$(this).scrollTop();
-			$(document.body).hide();
+			documentBody.hide();
 		} else {
 			contactClicked = false; // Reset
 		}
@@ -37,8 +38,7 @@ $(document).ready(function() {
 	
 	loading = $('#loading');
 	
-	var randomInteger = function(min, max)
-	{
+	var randomInteger = function(min, max) {
 		return Math.floor(Math.random() * (max - min + 1) + min);
 	}
 	
@@ -144,7 +144,7 @@ $(document).ready(function() {
 		var project = entry.replace(/#/, '').replace('!', '');
 		
 		header.addClass('open');
-		$(document.body).addClass('disable-scroll');
+		documentBody.addClass('disable-scroll');
 		
 		setTimeout(function() {
 			loading.addClass('active');
@@ -152,7 +152,7 @@ $(document).ready(function() {
 			projectContainer.load('projects/' + project + '.php', function(response, status) {
 				if (status == 'error') {
 				  header.removeClass('open');
-				  $(document.body).removeClass('disable-scroll');
+				  documentBody.removeClass('disable-scroll');
 				  
 				  alert('The requested project was not found. If you feel you have received this message in error, please contact me at kevin.beronilla@gmail.com and I will look into the issue.');
 				}
@@ -209,7 +209,7 @@ $(document).ready(function() {
 			var closeHeader = function() {
 				loading.removeClass('active');	
 				header.removeClass('open');
-				$(document.body).removeClass('disable-scroll');
+				documentBody.removeClass('disable-scroll');
 				projectHero.removeClass('active');
 				projectContent.removeClass('active');
 				

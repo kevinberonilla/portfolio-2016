@@ -67,7 +67,7 @@
                 <a href="#!/100-years-of-pier-website"><img src="images/100-years-of-pier-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">100 Years of Pier Website (2016)</span></a>
             </li>
             <li class="project web">
-                <a href="#!/appiphony-website"><img src="images/appiphony-lightning-js/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Appiphony Lightning JS Library (2015)</span></a>
+                <a href="#!/appiphony-lightning-js-library"><img src="images/appiphony-lightning-js-library/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Appiphony Lightning JS Library (2015)</span></a>
             </li>
             <li class="project gd web">
                 <a href="#!/appiphony-website"><img src="images/appiphony-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Appiphony Website (2015)</span></a>
