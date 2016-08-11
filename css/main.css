@@ -103,7 +103,7 @@ header nav ul li {
 header nav ul li a,
 header nav ul li a:visited {
     display: block;
-    color: rgb(30, 30, 30);
+    color: #1e1e1e;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -127,7 +127,7 @@ header .mobile-menu {
 header .mobile-menu:after {
     font-family: FontAwesome;
     font-size: 12px;
-    color: rgb(30, 30, 30);
+    color: #1e1e1e;
     content: '\f0c9';
     display: block;
     padding: 11.5px 12.5px;
@@ -255,7 +255,6 @@ header .mobile-menu.active:after {
     -moz-border-radius: 5px;
     border-radius: 5px;
     text-align: left;
-    cursor: pointer;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
@@ -287,7 +286,7 @@ header .mobile-menu.active:after {
 }
 #hero .container .intro .drop-down .options {
     list-style: none;
-    background-color: rgb(30, 30, 30);
+    background-color: #1e1e1e;
     font-weight: 300;
     position: absolute;
     top: 58px;
@@ -316,6 +315,7 @@ header .mobile-menu.active:after {
     color: #fff;
     padding: 6px 16px;
     margin: 0;
+    cursor: pointer;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
@@ -365,6 +365,7 @@ main #portfolio li a {
     transition: all 250ms ease;
     opacity: 0;
     margin-top: 60px;
+    pointer-events: none;
 }
 main #portfolio li.loaded a {
     opacity: 1;
@@ -376,6 +377,9 @@ main #portfolio li a img {
     -ms-transition: all 250ms ease;
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
+}
+main.loaded #portfolio li a {
+    pointer-events: all;
 }
 main.loaded #portfolio li a:hover img {
     -webkit-transform: scale(1.1);
@@ -507,7 +511,7 @@ main.loaded #portfolio li.loaded a:hover .title {
 #project .project-hero #close-btn:after {
     font-family: FontAwesome;
     font-size: 12px;
-    color: rgb(30, 30, 30);
+    color: #1e1e1e;
     content: '\f00d';
     display: block;
     padding: 11.5px 13px;
@@ -576,7 +580,7 @@ main.loaded #portfolio li.loaded a:hover .title {
 #project .project-content .notes {
     padding: 25px 30px;
     color: #fff;
-    background-color: rgb(30, 30, 30);
+    background-color: #1e1e1e;
 }
 #project .project-content .images,
 #project .project-content .videos {
@@ -597,7 +601,7 @@ main.loaded #portfolio li.loaded a:hover .title {
 #project .project-content .images .lSPrev,
 #project .project-content .images .lSNext {
     display: block;
-    color: rgb(30, 30, 30);
+    color: #1e1e1e;
     font-size: 18px;
     line-height: 12px;
     font-weight: 700;
@@ -658,7 +662,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     height: 100%;
 }
 .lSSlideOuter .lSPager.lSpg > li a {
-    background-color: rgba(30, 30, 30);
+    background-color: #1e1e1e;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
@@ -673,7 +677,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     border-radius: 5px;
     border: none;
     background: #fff;
-    color: rgb(30, 30, 30);
+    color: #1e1e1e;
 }
 .tooltipster-default .tooltipster-content {
     font-family: 'Source Sans Pro', sans-serif;
@@ -681,7 +685,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     padding: 10px 12px;
 }
 footer {
-    background-color: rgb(30, 30, 30);
+    background-color: #1e1e1e;
     color: #fff;
     font-size: 12px;
     line-height: 16px;
@@ -980,6 +984,12 @@ footer {
     }
     #hero .container .intro .drop-down {
         top: -5px;
+    }
+    main #portfolio li {
+        height: 180px;
+    }
+    main #portfolio li a {
+        height: 180px;
     }
 }
 @media only print {

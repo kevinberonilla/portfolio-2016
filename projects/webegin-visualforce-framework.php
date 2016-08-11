@@ -8,7 +8,7 @@
 <div class="project-content">
     <div class="notes">
         <p><strong>Client:</strong> N/A (Independent)</p>
-        <p><strong>Involvement:</strong> Original Concept, Graphic Design, Front-End Development</p>
+        <p><strong>Involvement:</strong> Original Concept, Framework Development, Graphic Design, Front-End Development</p>
         <p><strong>Git:</strong> <a href="http://github.com/kevinberonilla/visualforce-webegin" target="_blank">github.com/kevinberonilla/visualforce-webegin</a></p>
         <p><strong>Demo:</strong> <a href="http://kevinberonilla.com/demos/visualforce-webegin" target="_blank">kevinberonilla.com/demos/visualforce-webegin</a></p>
     </div>
