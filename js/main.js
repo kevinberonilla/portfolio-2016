@@ -2,7 +2,14 @@
 Global Variables
 ---------------------------------------- */
 var documentBody = $(document.body),
+    windowObj = $(window),
+    isMobile = false,
+    mobileUserAgentString = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i,
     loading;
+
+if (mobileUserAgentString.test(navigator.userAgent)) {
+    isMobile = true;
+}
 
 /* ----------------------------------------
 Page Refresh Functions
@@ -15,7 +22,7 @@ $(document).ready(function() {
 		contactClicked = true;
 	});
 	
-	$(window).on('beforeunload', function() {
+	windowObj.on('beforeunload', function() {
 		if (!contactClicked) { // Ignore onbeforeload event if contact button is clicked
 			$(this).scrollTop();
 			documentBody.hide();
@@ -45,7 +52,7 @@ $(document).ready(function() {
 	if (window.matchMedia('(min-width: 741px)').matches) loading.addClass('active'); 
 	else mainContainer.addClass('loaded');
 	
-	$(window).load(function() {
+	windowObj.load(function() {
 		loading.removeClass('active');
 		
 		portfolioImages.each(function() {
@@ -154,7 +161,7 @@ $(document).ready(function() {
 				  header.removeClass('open');
 				  documentBody.removeClass('disable-scroll');
 				  
-				  alert('The requested project was not found. If you feel you have received this message in error, please contact me at kevin.beronilla@gmail.com and I will look into the issue.');
+				  alert('The requested project could not be found. If you feel you have received this message in error, please contact me at kevin.beronilla@gmail.com and I will look into the issue.');
 				}
 			});
 		}, 250);		
@@ -238,7 +245,7 @@ $(document).ready(function() {
 	}
 	
 	if (hashValue) { // If URL has anchor
-		$(window).load(function() {
+		windowObj.load(function() {
 			openProject(hashValue);
 		});
 	}
@@ -249,8 +256,37 @@ $(document).ready(function() {
 		e.preventDefault();
 		openProject(project);
 	});
-	
 });
+
+/* ----------------------------------------
+Mobile Scroll Functions
+---------------------------------------- */
+if (isMobile) {
+    var portfolioItem = $('#portfolio li a');
+    
+    function handleScroll() {
+        var windowTopPos = windowObj.scrollTop(),
+            windowBottomPos = windowTopPos + windowObj.height(),
+            posPadding = 30,
+            headerHeight = $('header').height();
+        
+        portfolioItem.each(function() {
+            var self = $(this),
+                itemTopPos = self.offset().top,
+                itemBottomPos = itemTopPos + self.height();
+            
+            if (itemTopPos >= (windowTopPos + headerHeight + posPadding) && itemBottomPos <= (windowBottomPos - posPadding)) {
+                self.addClass('hover');
+            } else {
+                self.removeClass('hover');
+            }
+        });
+    }
+    
+    windowObj.scroll(function() {
+        window.requestAnimationFrame(handleScroll);
+    });
+}
 
 /* ----------------------------------------
 Logo Functions
@@ -263,7 +299,7 @@ $(document).ready(function() {
 		mainView.animate({
 			scrollTop: 0,
 			easing: 'ease',
-		}, 250);
+		}, 100);
 	});
 });
 
