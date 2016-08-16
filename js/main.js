@@ -9,6 +9,8 @@ var documentBody = $(document.body),
 
 if (mobileUserAgentString.test(navigator.userAgent)) {
     isMobile = true;
+    
+    documentBody.addClass('mobile');
 }
 
 /* ----------------------------------------
@@ -26,9 +28,7 @@ $(document).ready(function() {
 		if (!contactClicked) { // Ignore onbeforeload event if contact button is clicked
 			$(this).scrollTop();
 			documentBody.hide();
-		} else {
-			contactClicked = false; // Reset
-		}
+		} else contactClicked = false; // Reset
 	});
 });
 
@@ -103,7 +103,7 @@ $(document).ready(function() {
 	});
 	
 	var filterPortfolio = function(className) {
-		if (className == 'all') portfolio.isotope({ filter: '*' });
+		if (className === 'all') portfolio.isotope({ filter: '*' });
 		else portfolio.isotope({ filter: '.' + className });
 	}
 	
@@ -157,7 +157,7 @@ $(document).ready(function() {
 			loading.addClass('active');
 			
 			projectContainer.load('projects/' + project + '.php', function(response, status) {
-				if (status == 'error') {
+				if (status === 'error') {
 				  header.removeClass('open');
 				  documentBody.removeClass('disable-scroll');
 				  
@@ -195,7 +195,7 @@ $(document).ready(function() {
 				projectMedia.load(function() {	
 					loadCount++;
 					
-					if (loadCount == totalCount) {
+					if (loadCount === totalCount) {
 						loading.removeClass('active');	
                         
 						function revealHero() {
@@ -235,11 +235,11 @@ $(document).ready(function() {
 			});
 			
 			header.click(function(e) {
-				if (e.target == this && projectHero.hasClass('active')) closeHeader(); // If clicked outside of loaded project
+				if (e.target === this && projectHero.hasClass('active')) closeHeader(); // If clicked outside of loaded project
 			});
 			
 			$(document).keyup(function(e) {
-				if (e.keyCode == 27 && projectHero.hasClass('active')) closeHeader(); // If Esc key is pressed on loaded project
+				if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(); // If Esc key is pressed on loaded project
 			});
 		});
 	}
@@ -262,28 +262,27 @@ $(document).ready(function() {
 Mobile Scroll Functions
 ---------------------------------------- */
 if (isMobile) {
-    var portfolioItem = $('#portfolio li a');
+    var portfolioItem = $('#portfolio li a'),
+        header = $('header'),
+        lastScrollTop = 0;
     
     function handleScroll() {
         var windowTopPos = windowObj.scrollTop(),
-            windowBottomPos = windowTopPos + windowObj.height(),
+            windowBottomPos = windowTopPos + window.innerHeight,
             posPadding = 30,
-            headerHeight = $('header').height();
+            headerHeight = header.height();
         
         portfolioItem.each(function() {
             var self = $(this),
                 itemTopPos = self.offset().top,
                 itemBottomPos = itemTopPos + self.height();
             
-            if (itemTopPos >= (windowTopPos + headerHeight + posPadding) && itemBottomPos <= (windowBottomPos - posPadding)) {
-                self.addClass('hover');
-            } else {
-                self.removeClass('hover');
-            }
+            if (itemTopPos >= (windowTopPos + headerHeight + posPadding) && itemBottomPos <= (windowBottomPos - posPadding)) self.addClass('hover');
+            else self.removeClass('hover');
         });
     }
     
-    windowObj.scroll(function() {
+    windowObj.scroll(function(e) {
         window.requestAnimationFrame(handleScroll);
     });
 }
