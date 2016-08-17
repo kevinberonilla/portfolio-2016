@@ -159,7 +159,6 @@
     <script src="js/jquery.lightSlider.min.js"></script>
     <script src="js/jquery.backgroundcover.min.js"></script>
     <script src="js/jquery.tooltipster.min.js"></script>
-    <script src="js/jquery.ba-throttle-debounce.min.js"></script>
     <script src="js/matchMedia.min.js"></script>
     <script src="js/main.min.js?v=<?= $resourceVersion ?>"></script>
     <?php include_once("analyticstracking.php") ?>
