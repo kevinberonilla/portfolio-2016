@@ -262,22 +262,18 @@ $(document).ready(function() {
 Mobile Scroll Functions
 ---------------------------------------- */
 if (isMobile) {
-    var portfolioItem = $('#portfolio li a'),
-        header = $('header'),
-        lastScrollTop = 0;
+    var portfolioItem = $('#portfolio li a');
     
     function handleScroll() {
         var windowTopPos = windowObj.scrollTop(),
-            windowBottomPos = windowTopPos + window.innerHeight,
-            posPadding = 30,
-            headerHeight = header.height();
+            windowBottomPos = windowTopPos + window.innerHeight;
         
         portfolioItem.each(function() {
             var self = $(this),
                 itemTopPos = self.offset().top,
                 itemBottomPos = itemTopPos + self.height();
             
-            if (itemTopPos >= (windowTopPos + headerHeight + posPadding) && itemBottomPos <= (windowBottomPos - posPadding)) self.addClass('hover');
+            if (itemTopPos >= windowTopPos && itemBottomPos <= windowBottomPos) self.addClass('hover');
             else self.removeClass('hover');
         });
     }

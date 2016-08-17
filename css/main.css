@@ -407,9 +407,10 @@ main #portfolio li a .title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;
     position: absolute;
+    width: auto;
     bottom: -100px;
+    left: 0;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
