@@ -260,31 +260,6 @@ $(document).ready(function() {
 });
 
 /* ----------------------------------------
-Mobile Scroll Functions
----------------------------------------- */
-if (isMobile) {
-    var portfolioItem = $('#portfolio li a');
-    
-    function handleScroll() {
-        var windowTopPos = windowObj.scrollTop(),
-            windowBottomPos = windowTopPos + window.innerHeight;
-        
-        portfolioItem.each(function() {
-            var self = $(this),
-                itemTopPos = self.offset().top,
-                itemBottomPos = itemTopPos + self.height();
-            
-            if (itemTopPos >= windowTopPos && itemBottomPos <= windowBottomPos) self.addClass('hover');
-            else self.removeClass('hover');
-        });
-    }
-    
-    windowObj.scroll(function(e) {
-        window.requestAnimationFrame(handleScroll);
-    });
-}
-
-/* ----------------------------------------
 Logo Functions
 ---------------------------------------- */
 $(document).ready(function() {

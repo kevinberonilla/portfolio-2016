@@ -408,9 +408,9 @@ main #portfolio li a .title {
     text-overflow: ellipsis;
     white-space: nowrap;
     position: absolute;
-    width: auto;
     bottom: -100px;
     left: 0;
+    width: 100%;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
@@ -429,18 +429,7 @@ main.loaded #portfolio li a:hover img {
     -webkit-filter: grayscale(0) brightness(1);
     filter: grayscale(0) brightness(1);
 }
-main.loaded #portfolio li a:hover img,
-main.loaded #portfolio li a.hover img {
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    transform: scale(1.05);
-    -webkit-filter: grayscale(0) brightness(1);
-    filter: grayscale(0) brightness(1);
-}
-main.loaded #portfolio li.loaded a:hover .title,
-main.loaded #portfolio li.loaded a.hover .title {
+main.loaded #portfolio li.loaded a:hover .title {
     bottom: 0;
 }
 #loading {
@@ -825,17 +814,18 @@ footer {
     main #portfolio li a .title {
         padding: 15px 30px;
     }
-    body.mobile main.loaded #portfolio li a:hover:not(.hover) img {
+    main #portfolio li a img,
+    main.loaded #portfolio li a:hover img {
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
         transform: scale(1);
-        -webkit-filter: grayscale(0.25) brightness(0.75);
-        filter: grayscale(0.25) brightness(0.75);
+        -webkit-filter: grayscale(0) brightness(1);
+        filter: grayscale(0) brightness(1);
     }
-    body.mobile main.loaded #portfolio li.loaded a:hover:not(.hover) .title {
-        bottom: -100px;
+    main #portfolio li a .title {
+        bottom: 0;
     }
     #project .project-hero {
         height: 220px;
