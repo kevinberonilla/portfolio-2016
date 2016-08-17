@@ -158,10 +158,11 @@ $(document).ready(function() {
 			
 			projectContainer.load('projects/' + project + '.php', function(response, status) {
 				if (status === 'error') {
-				  header.removeClass('open');
-				  documentBody.removeClass('disable-scroll');
-				  
-				  alert('The requested project could not be found. If you feel you have received this message in error, please contact me at kevin.beronilla@gmail.com and I will look into the issue.');
+                    header.removeClass('open');
+                    documentBody.removeClass('disable-scroll');
+                    
+                    alert('The requested project could not be found. If you feel you have received this message in error, please contact me at kevin.beronilla@gmail.com and I will look into the issue.');
+                    loading.removeClass('active');
 				}
 			});
 		}, 250);		

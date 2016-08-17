@@ -453,6 +453,7 @@ main.loaded #portfolio li.loaded a.hover .title {
     margin-top: -10px;
     opacity: 0;
     z-index: 9999;
+    pointer-events: none;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
