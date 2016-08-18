@@ -410,7 +410,7 @@ main #portfolio li a .title {
     position: absolute;
     bottom: -100px;
     left: 0;
-    width: 100%;
+    width: auto;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
