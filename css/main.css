@@ -402,7 +402,7 @@ main #portfolio li a img {
 }
 main #portfolio li a .title {
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -539,7 +539,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     color: rgb(246, 139, 31);
 }
 #project .project-hero .title {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px 30px;
     position: absolute;
     width: 100%;
