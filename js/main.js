@@ -3,6 +3,7 @@ Global Variables
 ---------------------------------------- */
 var documentBody = $(document.body),
     windowObj = $(window),
+    mainView = $('html, body'),
     isMobile = false,
     mobileUserAgentString = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i,
     loading;
@@ -20,15 +21,17 @@ $(document).ready(function() {
 	var contactButton = $('#contact'),
         contactClicked = false;
     
+    mainView.scrollTop(0);
+    
 	contactButton.click(function() {
 		contactClicked = true;
 	});
 	
-	windowObj.on('beforeunload', function() {
-		if (!contactClicked) { // Ignore onbeforeload event if contact button is clicked
-			$(this).scrollTop();
-			documentBody.hide();
-		} else contactClicked = false; // Reset
+	windowObj.on('beforeunload unload pagehide', function() {
+		if (!contactClicked) { // Ignore event if contact button is clicked
+            mainView.scrollTop(0);
+            documentBody.hide();
+        } else contactClicked = false; // Reset
 	});
 });
 
@@ -263,8 +266,7 @@ $(document).ready(function() {
 Logo Functions
 ---------------------------------------- */
 $(document).ready(function() {
-	var logo = $('.logo'),
-        mainView = $('html, body');
+	var logo = $('.logo');
 	
 	logo.click(function() {
 		mainView.animate({
