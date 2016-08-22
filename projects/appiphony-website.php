@@ -8,7 +8,7 @@
 <div class="project-content">
     <div class="notes">
         <p><strong>Client:</strong> Appiphony</p>
-        <p><strong>Involvement:</strong> Original Concept, Graphic Design, Front-End Development, Photography (Partial)</p>
+        <p><strong>Involvement:</strong> Original Concept, Graphic Design, Front-End Development, Photography</p>
         <p><strong>Live Site:</strong> <a href="http://appiphony.com" target="_blank">appiphony.com</a></p>
     </div>
     <div class="images">
