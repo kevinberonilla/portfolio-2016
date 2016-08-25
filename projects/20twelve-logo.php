@@ -1,5 +1,8 @@
 <div class="project-hero" style="background-image: url(images/20twelve-logo/hero-bg.jpg)">
-    <a href="#" id="close-btn"></a>
+    <div class="project-actions">
+        <a href="#" id="info-btn">Info</a>
+        <a href="#" id="close-btn"></a>
+    </div>
     <div class="title clearfix">
         <h2>20twelve Logo (2007)</h2>
         <div class="tools"><img class="tooltip" title="Created with Illustrator" src="images/icons/illustrator.svg"></div>

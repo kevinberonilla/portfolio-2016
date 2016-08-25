@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#1e1e1e">
     <meta name="description" content="The web portfolio of Kevin Beronilla, a visual artist from the Chicagoland area.">
     <meta name="keywords" content="portfolio, graphic design, web, photography, video, chicago, visual art">

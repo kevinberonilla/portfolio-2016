@@ -176,7 +176,9 @@ $(document).ready(function() {
                 projectMedia = $('#project img'),
                 projectHero = $('.project-hero'),
                 projectContent = $('.project-content'),
-                closeButton = $('#close-btn');
+                closeButton = $('#close-btn'),
+                infoButton = $('#info-btn'),
+                notes = $('.project-content .notes');
             
 			function initializePlugins() {
 				if (!sliderElements.length) initializeSlider();
@@ -237,6 +239,11 @@ $(document).ready(function() {
 				e.preventDefault();
 				closeHeader();
 			});
+            
+            infoButton.click(function(e) {
+                e.preventDefault();
+                notes.slideToggle(250);
+            });
 			
 			header.click(function(e) {
 				if (e.target === this && projectHero.hasClass('active')) closeHeader(); // If clicked outside of loaded project
