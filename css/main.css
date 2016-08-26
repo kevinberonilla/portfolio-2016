@@ -211,6 +211,7 @@ header .mobile-menu.active:after {
     font-size: 28px;
     line-height: 48px;
     font-weight: 300;
+    letter-spacing: -0.25px;
     color: #fff;
     position: absolute;
     z-index: 2;
@@ -525,7 +526,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     margin-left: 10px;
 }
 #project .project-hero .project-actions #close-btn {
-    padding: 10.5px 13.25px;
+    padding: 10.5px 13.5px;
 }
 #project .project-hero .project-actions #info-btn {
     padding: 10.5px 16px;
@@ -559,6 +560,7 @@ main.loaded #portfolio li.loaded a:hover .title {
 #project .project-hero .title h2 {
     font-size: 36px;
     font-weight: 300;
+    letter-spacing: -0.25px;
     display: inline-block;
     float: left;
     color: #fff;
@@ -713,6 +715,15 @@ footer {
     font-size: 12px;
     line-height: 16px;
     padding: 30px 0;
+    opacity: 0;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+footer.reveal {
+    opacity: 1;
 }
 @media only screen and (max-width: 1340px) {
     .container {

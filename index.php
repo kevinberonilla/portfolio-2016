@@ -1,4 +1,4 @@
-<?php $resourceVersion = '1.28'; ?>
+<?php $resourceVersion = '1.30'; ?>
 <!doctype html>
 <html>
 
@@ -37,7 +37,7 @@
         </div>
         <div id="project" class="container"> </div>
     </header>
-    <div id="loading">
+    <div id="loading" class="active">
         <div class="bounce-1"></div>
         <div class="bounce-2"></div>
         <div class="bounce-3"></div>
@@ -160,7 +160,7 @@
     <script src="js/jquery.backgroundcover.min.js"></script>
     <script src="js/jquery.tooltipster.min.js"></script>
     <script src="js/matchMedia.min.js"></script>
-    <script src="js/main.js?v=<?= $resourceVersion ?>"></script>
+    <script src="js/main.min.js?v=<?= $resourceVersion ?>"></script>
     <?php include_once("analyticstracking.php") ?>
 </body>
 
