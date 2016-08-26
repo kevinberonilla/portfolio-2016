@@ -1,5 +1,8 @@
 <div class="project-hero" style="background-image: url(images/navy-pier-website/hero-bg.jpg)">
-    <a href="#" id="close-btn"></a>
+    <ul class="project-actions clearfix">
+        <li><a href="#" id="info-btn"></a></li>
+        <li><a href="#" id="close-btn"></a></li>
+    </ul>
     <div class="title clearfix">
         <h2>Navy Pier Website (2015)</h2>
         <div class="tools"><img class="tooltip" title="Developed with HTML5" src="images/icons/html5.svg"><img class="tooltip" title="Developed with CSS3" src="images/icons/css3.svg"><img class="tooltip" title="Developed with JavaScript" src="images/icons/javascript.svg"><img class="tooltip" title="Developed with jQuery" src="images/icons/jquery.svg"><img class="tooltip" title="Map Developed with Google Maps API" src="images/icons/google-api.svg"><img class="tooltip" title="Developed with PHP" src="images/icons/php.svg"><img class="tooltip" title="Developed with WordPress" src="images/icons/wordpress.svg"></div>

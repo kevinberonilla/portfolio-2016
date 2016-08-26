@@ -1,5 +1,8 @@
 <div class="project-hero" style="background-image: url(images/tenant-first-logo/hero-bg.jpg)">
-    <a href="#" id="close-btn"></a>
+    <ul class="project-actions clearfix">
+        <li><a href="#" id="info-btn"></a></li>
+        <li><a href="#" id="close-btn"></a></li>
+    </ul>
     <div class="title clearfix">
         <h2>Tenant First Logo (2014)</h2>
         <div class="tools"><img class="tooltip" title="Created with Illustrator" src="images/icons/illustrator.svg"></div>

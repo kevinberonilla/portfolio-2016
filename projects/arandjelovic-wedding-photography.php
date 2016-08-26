@@ -1,5 +1,8 @@
 <div class="project-hero" style="background-image: url(images/arandjelovic-wedding-photography/hero-bg.jpg)">
-    <a href="#" id="close-btn"></a>
+    <ul class="project-actions clearfix">
+        <li><a href="#" id="info-btn"></a></li>
+        <li><a href="#" id="close-btn"></a></li>
+    </ul>
     <div class="title clearfix">
         <h2>Arandjelovic Wedding Photography (2009)</h2>
         <div class="tools"><img class="tooltip" title="Edited with Photoshop" src="images/icons/photoshop.svg"></div>

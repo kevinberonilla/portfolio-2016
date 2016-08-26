@@ -153,14 +153,14 @@
         <div class="container">&copy;
             <?php echo date('Y'); ?> Kevin Beronilla. All works featured, unless noted as academic or independent, are copyrighted by the respective companies and organizations of which they are a representation of.</div>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.lightSlider.min.js"></script>
     <script src="js/jquery.backgroundcover.min.js"></script>
     <script src="js/jquery.tooltipster.min.js"></script>
     <script src="js/matchMedia.min.js"></script>
-    <script src="js/main.min.js?v=<?= $resourceVersion ?>"></script>
+    <script src="js/main.js?v=<?= $resourceVersion ?>"></script>
     <?php include_once("analyticstracking.php") ?>
 </body>
 

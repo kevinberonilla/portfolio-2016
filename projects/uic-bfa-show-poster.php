@@ -1,5 +1,8 @@
 <div class="project-hero" style="background-image: url(images/uic-bfa-show-poster/hero-bg.jpg)">
-    <a href="#" id="close-btn"></a>
+    <ul class="project-actions clearfix">
+        <li><a href="#" id="info-btn"></a></li>
+        <li><a href="#" id="close-btn"></a></li>
+    </ul>
     <div class="title clearfix">
         <h2>UIC BFA Show Poster (2010)</h2>
         <div class="tools"><img class="tooltip" title="Layout Composited with InDesign" src="images/icons/indesign.svg"><img class="tooltip" title="Photos Edited with Photoshop" src="images/icons/photoshop.svg"></div>

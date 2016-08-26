@@ -1,5 +1,8 @@
 <div class="project-hero" style="background-image: url(images/70-rocks-logo/hero-bg.jpg)">
-    <a href="#" id="close-btn"></a>
+    <ul class="project-actions clearfix">
+        <li><a href="#" id="info-btn"></a></li>
+        <li><a href="#" id="close-btn"></a></li>
+    </ul>
     <div class="title clearfix">
         <h2>70 Rocks Logo (2011)</h2>
         <div class="tools"><img class="tooltip" title="Created with Illustrator" src="images/icons/illustrator.svg"></div>

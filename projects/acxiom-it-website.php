@@ -1,5 +1,8 @@
 <div class="project-hero" style="background-image: url(images/acxiom-it-website/hero-bg.jpg)">
-    <a href="#" id="close-btn"></a>
+    <ul class="project-actions clearfix">
+        <li><a href="#" id="info-btn"></a></li>
+        <li><a href="#" id="close-btn"></a></li>
+    </ul>
     <div class="title clearfix">
         <h2>Acxiom IT Website (2014)</h2>
         <div class="tools"><img class="tooltip" title="Graphics Created with Illustrator" src="images/icons/illustrator.svg"><img class="tooltip" title="Layout Mockup Created with Photoshop" src="images/icons/photoshop.svg"><img class="tooltip" title="Developed with HTML5" src="images/icons/html5.svg"><img class="tooltip" title="Developed with CSS3" src="images/icons/css3.svg"><img class="tooltip" title="Developed with PHP" src="images/icons/php.svg"><img class="tooltip" title="Developed with WordPress" src="images/icons/wordpress.svg"></div>

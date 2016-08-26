@@ -167,7 +167,8 @@ header .mobile-menu:after {
     box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
 }
 header .mobile-menu.active:after {
-    color: rgb(246, 139, 31);
+    color: #1e1e1e;
+    background-color: rgb(246, 139, 31);
 }
 #hero {
     position: relative;
@@ -516,14 +517,36 @@ main.loaded #portfolio li.loaded a:hover .title {
     position: absolute;
     top: 30px;
     right: 30px;
+    list-style: none;
 }
-#project .project-hero .project-actions #close-btn:after {
-    font-family: FontAwesome;
+#project .project-hero .project-actions li {
+    float: left;
+    display: block;
+    margin-left: 10px;
+}
+#project .project-hero .project-actions #close-btn {
+    padding: 10.5px 13.25px;
+}
+#project .project-hero .project-actions #info-btn {
+    padding: 10.5px 16px;
+}
+#project .project-hero .project-actions #info-btn.active {
     color: #1e1e1e;
-    content: '\f00d';
-    padding: 11.5px 13px;
+    background-color: rgb(246, 139, 31);
 }
-#project .project-hero .project-actions #close-btn:hover:after {
+#project .project-hero .project-actions #info-btn.active:hover {
+    color: #fff;
+}
+#project .project-hero .project-actions #close-btn:after,
+#project .project-hero .project-actions #info-btn:after {
+    font-family: FontAwesome;
+    content: '\f00d';
+}
+#project .project-hero .project-actions #info-btn:after {
+    content: '\f129';
+}
+#project .project-hero .project-actions #close-btn:hover,
+#project .project-hero .project-actions #info-btn:hover {
     color: rgb(246, 139, 31);
 }
 #project .project-hero .title {
@@ -605,13 +628,14 @@ main.loaded #portfolio li.loaded a:hover .title {
     font-size: 18px;
     line-height: 12px;
     font-weight: 700;
-    width: 35px;
-    height: 35px;
+    width: 36px;
+    height: 36px;
     background-color: #fff;
     background-image: none;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    opacity: 1;
     -webkit-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);

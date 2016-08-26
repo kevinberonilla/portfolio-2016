@@ -1,5 +1,8 @@
 <div class="project-hero" style="background-image: url(images/ascp-marketing-collateral/hero-bg.jpg)">
-    <a href="#" id="close-btn"></a>
+    <ul class="project-actions clearfix">
+        <li><a href="#" id="info-btn"></a></li>
+        <li><a href="#" id="close-btn"></a></li>
+    </ul>
     <div class="title clearfix">
         <h2>ASCP Marketing Collateral (2010–2013)</h2>
         <div class="tools"><img class="tooltip" title="Graphics Created with Illustrator" src="images/icons/illustrator.svg"><img class="tooltip" title="Layouts Composited with InDesign" src="images/icons/indesign.svg"><img class="tooltip" title="Photos Edited with Photoshop" src="images/icons/photoshop.svg"></div>

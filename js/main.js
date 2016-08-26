@@ -1,8 +1,9 @@
 /* ----------------------------------------
 Global Variables
 ---------------------------------------- */
-var documentBody = $(document.body),
-    windowObj = $(window),
+var windowObj = $(window),
+    documentObj = $(document),
+    documentBody = $(document.body),
     mainView = $('html, body'),
     isMobile = false,
     mobileUserAgentString = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i,
@@ -17,7 +18,7 @@ if (mobileUserAgentString.test(navigator.userAgent)) {
 /* ----------------------------------------
 Page Refresh Functions
 ---------------------------------------- */
-$(document).ready(function() {
+documentObj.ready(function() {
 	var contactButton = $('#contact'),
         contactClicked = false;
     
@@ -38,7 +39,7 @@ $(document).ready(function() {
 /* ----------------------------------------
 Page Load Functions
 ---------------------------------------- */
-$(document).ready(function() {
+documentObj.ready(function() {
 	var portfolioImages = $('#portfolio li a img'),
         mainContainer = $('main'),
         heroRegion = $('#hero'),
@@ -91,7 +92,7 @@ $(document).ready(function() {
 /* ----------------------------------------
 Filter Functions
 ---------------------------------------- */
-$(document).ready(function() {
+documentObj.ready(function() {
 	var portfolio = $('#portfolio'),
         dropDown = $('.drop-down'),
         dropDownOptions = $('.options'),
@@ -131,7 +132,7 @@ $(document).ready(function() {
 /* ----------------------------------------
 Portfolio Functions
 ---------------------------------------- */
-$(document).ready(function() {
+documentObj.ready(function() {
 	var header = $('header'),
         portfolioItem = $('#portfolio li a'),
         projectContainer = $('#project'),
@@ -170,15 +171,13 @@ $(document).ready(function() {
 			});
 		}, 250);		
 		
-		$(document).ajaxComplete(function() {
+		documentObj.ajaxComplete(function() {
             var sliderElements = $('.lSSlideOuter'),
                 tooltips = $('.tooltip'),
                 projectMedia = $('#project img'),
                 projectHero = $('.project-hero'),
                 projectContent = $('.project-content'),
-                closeButton = $('#close-btn'),
-                infoButton = $('#info-btn'),
-                notes = $('.project-content .notes');
+                closeButton = $('#close-btn');
             
 			function initializePlugins() {
 				if (!sliderElements.length) initializeSlider();
@@ -192,6 +191,29 @@ $(document).ready(function() {
 					touchDevices: true,
 					trigger: 'hover'
 				});
+			}
+            
+            function handleKeyup(e) {
+                if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(); // If Esc key is pressed on loaded project
+            }
+            
+			function closeHeader() {
+                closeButton.unbind();
+                documentObj.unbind('keyup', handleKeyup);
+				loading.removeClass('active');	
+				header.removeClass('open');
+				documentBody.removeClass('disable-scroll');
+				projectHero.removeClass('active');
+				projectContent.removeClass('active');
+				
+				header.animate({
+					scrollTop: 0,
+					easing: 'ease',
+				}, 250);
+                
+				setTimeout(function() {
+					projectContainer.empty();
+				}, 250);
 			}
             
 			$.when(initializePlugins()).done(function() {
@@ -218,40 +240,17 @@ $(document).ready(function() {
 					}
 				});
 			});
-            
-			var closeHeader = function() {
-				loading.removeClass('active');	
-				header.removeClass('open');
-				documentBody.removeClass('disable-scroll');
-				projectHero.removeClass('active');
-				projectContent.removeClass('active');
-				
-				header.animate({
-					scrollTop: 0,
-					easing: 'ease',
-				}, 250);
-				setTimeout(function() {
-					projectContainer.empty();
-				}, 250);
-			}
 			
 			closeButton.click(function(e) {
-				e.preventDefault();
-				closeHeader();
-			});
-            
-            infoButton.click(function(e) {
                 e.preventDefault();
-                notes.slideToggle(250);
+                closeHeader();
             });
 			
 			header.click(function(e) {
 				if (e.target === this && projectHero.hasClass('active')) closeHeader(); // If clicked outside of loaded project
 			});
 			
-			$(document).keyup(function(e) {
-				if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(); // If Esc key is pressed on loaded project
-			});
+			documentObj.keyup(handleKeyup);
 		});
 	}
 	
@@ -267,12 +266,18 @@ $(document).ready(function() {
 		e.preventDefault();
 		openProject(project);
 	});
+    
+    documentBody.on('click', '#info-btn', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.project-content .notes').slideToggle(250);
+    });
 });
 
 /* ----------------------------------------
 Logo Functions
 ---------------------------------------- */
-$(document).ready(function() {
+documentObj.ready(function() {
 	var logo = $('.logo');
 	
 	logo.click(function() {
@@ -286,7 +291,7 @@ $(document).ready(function() {
 /* ----------------------------------------
 Mobile Menu Functions
 ---------------------------------------- */
-$(document).ready(function() {
+documentObj.ready(function() {
 	var mobileMenu = $('.mobile-menu'),
         switchingContent = $('header h1, header nav');
 	
@@ -299,6 +304,6 @@ $(document).ready(function() {
 /* ----------------------------------------
 Background Cover Initialize
 ---------------------------------------- */
-$(document).ready(function() {
+documentObj.ready(function() {
 	$('.background-cover').backgroundCover();
 });
