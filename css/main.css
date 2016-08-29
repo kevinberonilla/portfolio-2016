@@ -996,6 +996,9 @@ footer.reveal {
         margin: 0 5px 0 0;
         height: 20px;
     }
+    #project .project-hero .project-actions #info-btn.active:hover {
+        color: #1e1e1e;
+    }
     #project .project-content .notes {
         padding: 12px 15px 14px 15px;
     }

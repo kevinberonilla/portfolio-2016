@@ -189,7 +189,7 @@ documentObj.ready(function() {
                 
 				tooltips.tooltipster({ // Tootipster initialize
 					animation: 'grow',
-					position: 'bottom',
+					position: 'top',
 					delay: 0,
 					speed: 250,
 					theme: 'tooltipster-default',
