@@ -50,7 +50,7 @@ documentObj.ready(function() {
 	
 	loading = $('#loading');
 	
-	var randomInteger = function(min, max) {
+	function randomInteger(min, max) {
 		return Math.floor(Math.random() * (max - min + 1) + min);
 	}
 	
@@ -111,7 +111,7 @@ documentObj.ready(function() {
 		transitionDuration: '0.25s'
 	});
 	
-	var filterPortfolio = function(className) {
+	function filterPortfolio(className) {
 		if (className === 'all') portfolio.isotope({ filter: '*' });
 		else portfolio.isotope({ filter: '.' + className });
 	}
@@ -142,21 +142,106 @@ documentObj.ready(function() {
         portfolioItem = $('#portfolio li a'),
         projectContainer = $('#project'),
         hashValue = window.location.hash;
-			
-	var initializeSlider = function() { // LightSlider initialize
-		$('#project .project-content .images ul').lightSlider({
-			adaptiveHeight: true,
-			speed: 250,
-			item: 1,
-			slideMargin: 15,
-			loop: false,
-			pager: true,
-			galleryMargin: 30,
-			keyPress: true
-		});
-	}
+        
+    function initializePlugins(sliderElement, tooltip) {
+        if (!sliderElement.length) {
+            $('#project .project-content .images ul').lightSlider({ // LightSlider initialize
+                adaptiveHeight: true,
+                speed: 250,
+                item: 1,
+                slideMargin: 15,
+                loop: false,
+                pager: true,
+                galleryMargin: 30,
+                keyPress: true
+            });
+        }
+        
+        tooltip.tooltipster({ // Tootipster initialize
+            animation: 'grow',
+            position: 'top',
+            delay: 0,
+            speed: 250,
+            theme: 'tooltipster-default',
+            touchDevices: true,
+            trigger: 'hover',
+            debug: false
+        });
+    }
+
+    function closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent) {
+        closeButton.unbind('click');
+        documentObj.unbind('keyup', handleKeyup);
+        loading.removeClass('active');	
+        header.removeClass('open');
+        documentBody.removeClass('disable-scroll');
+        projectHero.removeClass('active');
+        projectContent.removeClass('active');
+
+        header.animate({
+            scrollTop: 0,
+            easing: 'ease',
+        }, 250);
+
+        setTimeout(function() {
+            projectContainer.empty();
+        }, 250);
+    }	
+
+    function revealHero(projectHero) {
+        setTimeout(function() {
+            projectHero.addClass('active');
+        }, 350);
+    }
+
+    function revealProject(loading, projectHero, projectContent) {
+        loading.removeClass('active');
+
+        $.when(revealHero(projectHero)).done(function() {
+            setTimeout(function() {
+                projectContent.addClass('active');
+            }, 250);
+        });
+    }
+    
+    function initProject() {
+        var sliderElement = $('.lSSlideOuter'),
+            tooltip = $('.tooltip'),
+            projectMedia = $('#project img, #project iframe'),
+            projectHero = $('.project-hero'),
+            projectContent = $('.project-content'),
+            closeButton = $('#close-btn');
+        
+        var handleKeyup = function(e) {
+            if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If Esc key is pressed on loaded project
+        }
+        
+        $.when(initializePlugins(sliderElement, tooltip)).done(function() {
+            var loadCount = 0,
+                totalCount = projectMedia.length;
+            
+            if (totalCount === 0) revealProject(loading, projectHero, projectContent);
+            else {
+                projectMedia.load(function() {	
+                    loadCount++;
+                    if (loadCount === totalCount) revealProject(loading, projectHero, projectContent);
+                });
+            }
+        });
+        
+        closeButton.click(function(e) {
+            e.preventDefault();
+            closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent);
+        });
+        
+        header.click(function(e) {
+            if (e.target === this && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If clicked outside of loaded project
+        });
+        
+        documentObj.keyup(handleKeyup);
+    }
 	
-	var openProject = function(entry) {
+	function openProject(entry) {
 		var project = entry.replace(/#/, '').replace('!', '');
 		
 		header.addClass('open');
@@ -167,96 +252,12 @@ documentObj.ready(function() {
 			
 			projectContainer.load('projects/' + project + '.php', function(response, status) {
 				if (status === 'error') {
-                    header.removeClass('open');
-                    documentBody.removeClass('disable-scroll');
-                    
-                    alert('The requested project could not be found. If you feel you have received this message in error, please contact me at kevin.beronilla@gmail.com and I will look into the issue.');
-                    loading.removeClass('active');
+                    openProject('not-found');
 				}
 			});
-		}, 250);		
+		}, 250);
 		
-		documentObj.ajaxComplete(function() {
-            var sliderElements = $('.lSSlideOuter'),
-                tooltips = $('.tooltip'),
-                projectMedia = $('#project img'),
-                projectHero = $('.project-hero'),
-                projectContent = $('.project-content'),
-                closeButton = $('#close-btn');
-            
-			function initializePlugins() {
-				if (!sliderElements.length) initializeSlider();
-                
-				tooltips.tooltipster({ // Tootipster initialize
-					animation: 'grow',
-					position: 'top',
-					delay: 0,
-					speed: 250,
-					theme: 'tooltipster-default',
-					touchDevices: true,
-					trigger: 'hover'
-				});
-			}
-            
-            function handleKeyup(e) {
-                if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(); // If Esc key is pressed on loaded project
-            }
-            
-			function closeHeader() {
-                closeButton.unbind('click');
-                documentObj.unbind('keyup', handleKeyup);
-				loading.removeClass('active');	
-				header.removeClass('open');
-				documentBody.removeClass('disable-scroll');
-				projectHero.removeClass('active');
-				projectContent.removeClass('active');
-				
-				header.animate({
-					scrollTop: 0,
-					easing: 'ease',
-				}, 250);
-                
-				setTimeout(function() {
-					projectContainer.empty();
-				}, 250);
-			}
-            
-			$.when(initializePlugins()).done(function() {
-				var loadCount = 0,
-                    totalCount = projectMedia.length;
-				
-				projectMedia.load(function() {	
-					loadCount++;
-					
-					if (loadCount === totalCount) {
-						loading.removeClass('active');	
-                        
-						function revealHero() {
-							setTimeout(function() {
-								projectHero.addClass('active');
-							}, 350);
-						}
-                        
-						$.when(revealHero()).done(function() {
-							setTimeout(function() {
-								projectContent.addClass('active');
-							}, 250);
-						});
-					}
-				});
-			});
-			
-			closeButton.click(function(e) {
-                e.preventDefault();
-                closeHeader();
-            });
-			
-			header.click(function(e) {
-				if (e.target === this && projectHero.hasClass('active')) closeHeader(); // If clicked outside of loaded project
-			});
-			
-			documentObj.keyup(handleKeyup);
-		});
+		documentObj.ajaxComplete(initProject);
 	}
 	
 	if (hashValue) { // If URL has anchor

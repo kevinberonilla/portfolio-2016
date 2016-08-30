@@ -1,4 +1,4 @@
-<?php $resourceVersion = '1.30'; ?>
+<?php $resourceVersion = '1.31'; ?>
 <!doctype html>
 <html>
 
@@ -160,7 +160,7 @@
     <script src="js/jquery.backgroundcover.min.js"></script>
     <script src="js/jquery.tooltipster.min.js"></script>
     <script src="js/matchMedia.min.js"></script>
-    <script src="js/main.min.js?v=<?= $resourceVersion ?>"></script>
+    <script src="js/main.js?v=<?= $resourceVersion ?>"></script>
     <?php include_once("analyticstracking.php") ?>
 </body>
 
