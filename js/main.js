@@ -19,12 +19,12 @@ if (mobileUserAgentString.test(navigator.userAgent)) {
 Page Refresh Functions
 ---------------------------------------- */
 documentObj.ready(function() {
-	var contactButton = $('#contact'),
+	var contactLink = $('.contact-link'),
         contactClicked = false;
     
     mainView.scrollTop(0);
     
-	contactButton.click(function() {
+	contactLink.click(function() {
 		contactClicked = true;
 	});
 	
@@ -55,10 +55,9 @@ documentObj.ready(function() {
 	}
 	
 	if (window.matchMedia('(max-width: 740px)').matches) {
-        loading.removeClass('active');
         mainContainer.addClass('loaded');
         footer.addClass('reveal');
-    }
+    } else loading.addClass('active');
 	
 	windowObj.load(function() {
 		loading.removeClass('active');
@@ -161,14 +160,14 @@ documentObj.ready(function() {
             animation: 'grow',
             position: 'top',
             delay: 0,
-            speed: 250,
+            speed: 200,
             theme: 'tooltipster-default',
             touchDevices: true,
             trigger: 'hover',
             debug: false
         });
     }
-
+    
     function closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent) {
         closeButton.unbind('click');
         documentObj.unbind('keyup', handleKeyup);
@@ -177,26 +176,26 @@ documentObj.ready(function() {
         documentBody.removeClass('disable-scroll');
         projectHero.removeClass('active');
         projectContent.removeClass('active');
-
+        
         header.animate({
             scrollTop: 0,
             easing: 'ease',
         }, 250);
-
+        
         setTimeout(function() {
             projectContainer.empty();
         }, 250);
     }	
-
+    
     function revealHero(projectHero) {
         setTimeout(function() {
             projectHero.addClass('active');
         }, 350);
     }
-
+    
     function revealProject(loading, projectHero, projectContent) {
         loading.removeClass('active');
-
+        
         $.when(revealHero(projectHero)).done(function() {
             setTimeout(function() {
                 projectContent.addClass('active');
@@ -210,21 +209,29 @@ documentObj.ready(function() {
             projectMedia = $('#project img, #project iframe'),
             projectHero = $('.project-hero'),
             projectContent = $('.project-content'),
-            closeButton = $('#close-btn');
-        
-        var handleKeyup = function(e) {
-            if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If Esc key is pressed on loaded project
-        }
+            closeButton = $('#close-btn'),
+            handleKeyup = function(e) {
+                if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If Esc key is pressed on loaded project
+            }
         
         $.when(initializePlugins(sliderElement, tooltip)).done(function() {
             var loadCount = 0,
                 totalCount = projectMedia.length;
             
-            if (totalCount === 0) revealProject(loading, projectHero, projectContent);
+            console.log(document.fonts.size);
+            console.log(document.fonts.status);
+            
+            if (totalCount === 0) {
+                if (typeof(document.fonts) === 'undefined') revealProject(loading, projectHero, projectContent);
+                else document.fonts.ready.then(revealProject(loading, projectHero, projectContent)); // Wait for web fonts to load
+            }
             else {
                 projectMedia.load(function() {	
                     loadCount++;
-                    if (loadCount === totalCount) revealProject(loading, projectHero, projectContent);
+                    if (loadCount === totalCount) {
+                        if (typeof(document.fonts) === 'undefined') revealProject(loading, projectHero, projectContent);
+                        else document.fonts.ready.then(revealProject(loading, projectHero, projectContent)); // Wait for web fonts to load
+                    }
                 });
             }
         });
@@ -251,20 +258,14 @@ documentObj.ready(function() {
 			loading.addClass('active');
 			
 			projectContainer.load('projects/' + project + '.php', function(response, status) {
-				if (status === 'error') {
-                    openProject('not-found');
-				}
+				if (status === 'error') openProject('not-found');
 			});
 		}, 250);
 		
 		documentObj.ajaxComplete(initProject);
 	}
 	
-	if (hashValue) { // If URL has anchor
-		windowObj.load(function() {
-			openProject(hashValue);
-		});
-	}
+	if (hashValue) windowObj.load(openProject(hashValue)); // If URL has anchor
 	
 	portfolioItem.click(function(e) {		
 		var project = $(this).attr('href');
@@ -277,7 +278,7 @@ documentObj.ready(function() {
         e.preventDefault();
         $(this).toggleClass('active');
         $('.project-content .notes').stop()
-            .slideToggle(250);
+            .slideToggle(150);
     });
 });
 
@@ -289,9 +290,8 @@ documentObj.ready(function() {
 	
 	logo.click(function() {
 		mainView.animate({
-			scrollTop: 0,
-			easing: 'ease',
-		}, 100);
+			scrollTop: 0
+		}, 500);
 	});
 });
 

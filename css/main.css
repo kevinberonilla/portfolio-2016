@@ -85,11 +85,11 @@ header {
     position: fixed;
     top: 0;
     z-index: 9999;
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
+    -webkit-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+    -moz-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+    -ms-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+    -o-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+    transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
 }
 header.open {
     overflow: auto;
@@ -181,11 +181,11 @@ header .mobile-menu.active:after {
     top: 0;
     width: 100%;
     height: 600px;
-    -webkit-transition: all 1500ms ease;
-    -moz-transition: all 1500ms ease;
-    -ms-transition: all 1500ms ease;
-    -o-transition: all 1500ms ease;
-    transition: all 1500ms ease;
+    -webkit-transition: opacity 1500ms ease;
+    -moz-transition: opacity 1500ms ease;
+    -ms-transition: opacity 1500ms ease;
+    -o-transition: opacity 1500ms ease;
+    transition: opacity 1500ms ease;
     opacity: 0;
 }
 #hero.reveal:after {
@@ -395,12 +395,22 @@ main #portfolio li.loaded a {
     opacity: 1;
     margin-top: 0;
 }
+main.loaded #portfolio li a {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+main #portfolio li a img,
+main #portfolio li a .title {
+    -webkit-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+    -moz-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+    -ms-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+    -o-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+    transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
+}
 main #portfolio li a img {
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
     -webkit-filter: grayscale(0.25) brightness(0.75);
     filter: grayscale(0.25) brightness(0.75);
 }
@@ -415,11 +425,6 @@ main #portfolio li a .title {
     bottom: -100px;
     left: 0;
     width: 100%;
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
 }
 main.loaded #portfolio li a {
     pointer-events: all;
@@ -469,8 +474,6 @@ main.loaded #portfolio li.loaded a:hover .title {
     animation-fill-mode: both;
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
 }
 #loading.active > div {
     -webkit-animation-play-state: running;
@@ -487,31 +490,35 @@ main.loaded #portfolio li.loaded a:hover .title {
 #project {
     margin-top: 22px;
 }
-#project .project-hero {
-    height: 300px;
-    position: relative;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+#project .project-hero,
+#project .project-content {
     opacity: 0;
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
+    -webkit-transition: all 350ms cubic-bezier(0.5, 0.1, 0, 1.75);
+    -moz-transition: all 350ms cubic-bezier(0.5, 0.1, 0, 1.75);
+    -ms-transition: all 350ms cubic-bezier(0.5, 0.1, 0, 1.75);
+    -o-transition: all 350ms cubic-bezier(0.5, 0.1, 0, 1.75);
+    transition: all 350ms cubic-bezier(0.5, 0.1, 0, 1.75);
     -moz-transform: translateY(100px);
     -webkit-transform: translateY(100px);
     -o-transform: translateY(100px);
     -ms-transform: translateY(100px);
-    transform: translateY(100px);
+    transform: translateY(100px);    
 }
-#project .project-hero.active {
+#project .project-hero.active,
+#project .project-content.active {
     opacity: 1;
     -moz-transform: translateY(0);
     -webkit-transform: translateY(0);
     -o-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+}
+#project .project-hero {
+    height: 300px;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 #project .project-hero .project-actions {
     display: block;
@@ -572,33 +579,14 @@ main.loaded #portfolio li.loaded a:hover .title {
 }
 #project .project-hero .title .tools img {
     display: inline-block;
-    margin: 4px 0 0 10px;
-    height: 40px;
+    margin: 8px 0 0 10px;
+    height: 36px;
     width: auto;
     max-width: 80px;
 }
 #project .project-content {
     background-color: #fff;
     margin-bottom: 30px;
-    opacity: 0;
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
-    -moz-transform: translateY(100px);
-    -webkit-transform: translateY(100px);
-    -o-transform: translateY(100px);
-    -ms-transform: translateY(100px);
-    transform: translateY(100px);
-}
-#project .project-content.active {
-    opacity: 1;
-    -moz-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
 }
 #project .project-content .notes {
     padding: 25px 30px;
@@ -607,7 +595,8 @@ main.loaded #portfolio li.loaded a:hover .title {
     display: none;
 }
 #project .project-content .images,
-#project .project-content .videos {
+#project .project-content .videos,
+#project .project-content .text {
     padding: 30px;
     position: relative;
 }
@@ -685,6 +674,10 @@ main.loaded #portfolio li.loaded a:hover .title {
     left: 0;
     width: 100%;
     height: 100%;
+}
+#project .project-content .text {
+    font-size: 18px;
+    line-height: 26px;
 }
 .lSSlideOuter .lSPager.lSpg > li a {
     background-color: #1e1e1e;
@@ -861,6 +854,10 @@ footer.reveal {
         margin-left: 8px;
         height: 28px;
     }
+    #project .project-content .text {
+        font-size: 16px;
+        line-height: 24px;
+    }
     #project .project-content .images .lSPrev,
     #project .project-content .images .lSNext {
         display: none;
@@ -973,6 +970,11 @@ footer.reveal {
         height: 240px;
         opacity: 1;
         margin-top: 0;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
     }
     #project .project-hero {
         height: 180px;
@@ -994,7 +996,7 @@ footer.reveal {
     }
     #project .project-hero .title .tools img {
         margin: 0 5px 0 0;
-        height: 20px;
+        height: 18px;
     }
     #project .project-hero .project-actions #info-btn.active:hover {
         color: #1e1e1e;
@@ -1003,8 +1005,13 @@ footer.reveal {
         padding: 12px 15px 14px 15px;
     }
     #project .project-content .images,
-    #project .project-content .videos {
+    #project .project-content .videos,
+    #project .project-content .text {
         padding: 15px;
+    }
+    #project .project-content .text {
+        font-size: 14px;
+        line-height: 20px;
     }
     #project .project-content .images .lSSlideOuter .lSPager.lSpg {
         margin-top: 15px !important;

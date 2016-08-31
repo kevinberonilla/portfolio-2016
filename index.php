@@ -1,4 +1,4 @@
-<?php $resourceVersion = '1.31'; ?>
+<?php $resourceVersion = '1.34'; ?>
 <!doctype html>
 <html>
 
@@ -30,14 +30,14 @@
                 <ul>
                     <li><a href="docs/kevin-beronilla-resume.pdf" target="_blank">Resume</a></li>
                     <li><a href="https://github.com/kevinberonilla" target="_blank">GitHub</a></li>
-                    <li><a id="contact" href="mailto:kevin.beronilla@gmail.com">Contact</a></li>
+                    <li><a href="mailto:kevin.beronilla@gmail.com" class="contact-link">Contact</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu"></div>
         </div>
         <div id="project" class="container"> </div>
     </header>
-    <div id="loading" class="active">
+    <div id="loading">
         <div class="bounce-1"></div>
         <div class="bounce-2"></div>
         <div class="bounce-3"></div>
@@ -153,14 +153,13 @@
         <div class="container">&copy;
             <?php echo date('Y'); ?> Kevin Beronilla. All works featured, unless noted as academic or independent, are copyrighted by the respective companies and organizations of which they are a representation of.</div>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.lightSlider.min.js"></script>
     <script src="js/jquery.backgroundcover.min.js"></script>
     <script src="js/jquery.tooltipster.min.js"></script>
     <script src="js/matchMedia.min.js"></script>
-    <script src="js/main.js?v=<?= $resourceVersion ?>"></script>
+    <script src="js/main.min.js?v=<?= $resourceVersion ?>"></script>
     <?php include_once("analyticstracking.php") ?>
 </body>
 
