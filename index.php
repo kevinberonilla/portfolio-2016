@@ -63,6 +63,9 @@
     </div>
     <main>
         <ul id="portfolio">
+            <li class="project gd">
+                <a href="#!/seiden-sans-typeface"><img src="images/seiden-sans-typeface/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Seiden Sans Typeface (2016)</span></a>
+            </li>
             <li class="project web">
                 <a href="#!/100-years-of-pier-website"><img src="images/100-years-of-pier-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">100 Years of Pier Website (2016)</span></a>
             </li>
@@ -90,9 +93,11 @@
             <li class="project gd">
                 <a href="#!/debrock-wedding-website"><img src="images/debrock-wedding-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">DeBrock Wedding Website (2014)</span></a>
             </li>
+            <?php /*
             <li class="project gd web">
                 <a href="#!/modern-way-cleaners-website"><img src="images/modern-way-cleaners-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Modern Way Cleaners Website (2014)</span></a>
             </li>
+            */ ?>
             <li class="project gd">
                 <a href="#!/central-park-lisle-logo"><img src="images/central-park-lisle-logo/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Central Park of Lisle Logo (2014)</span></a>
             </li>
