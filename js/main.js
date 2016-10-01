@@ -218,9 +218,6 @@ documentObj.ready(function() {
             var loadCount = 0,
                 totalCount = projectMedia.length;
             
-            console.log(document.fonts.size);
-            console.log(document.fonts.status);
-            
             if (totalCount === 0) {
                 if (typeof(document.fonts) === 'undefined') revealProject(loading, projectHero, projectContent);
                 else document.fonts.ready.then(revealProject(loading, projectHero, projectContent)); // Wait for web fonts to load

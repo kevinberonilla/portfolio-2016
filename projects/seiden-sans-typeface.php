@@ -5,14 +5,16 @@
     </ul>
     <div class="title clearfix">
         <h2>Seiden Sans Typeface (2016)</h2>
-        <div class="tools"><img class="tooltip" title="Letterforms Created with Illustrator" src="images/icons/illustrator.svg"></div>
         <div class="tools"><img class="tooltip" title="Font Created with BirdFont" src="images/icons/birdfont.svg"></div>
+        <div class="tools"><img class="tooltip" title="Letterforms Created with Illustrator" src="images/icons/illustrator.svg"></div>
     </div>
 </div>
 <div class="project-content">
     <div class="notes">
         <p><strong>Client:</strong> N/A (Independent)</p>
-        <p><strong>Involvement:</strong> Original Concept, Graphic Design, Font Development</p>
+        <p><strong>Involvement:</strong> Original Concept, Graphic Design, Font Design</p>
+        <p><strong>Git:</strong> <a href="https://github.com/kevinberonilla/seiden-sans" target="_blank">github.com/kevinberonilla/seiden-sans</a></p>
+        <p><strong>Demo:</strong> <a href="http://kevinberonilla.com/demos/seiden-sans" target="_blank">kevinberonilla.com/demos/seiden-sans</a></p>
     </div>
     <div class="images">
         <ul>
