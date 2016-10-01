@@ -1187,7 +1187,8 @@ header {
     font-size: 38px;
     letter-spacing: 3px;
     line-height: 42px;
-    text-align: right; }
+    text-align: right;
+    font-family: "Seiden Sans", sans-serif; }
     @media only screen and (max-width: 1140px) {
       #about .character-set {
         font-size: 32px;
