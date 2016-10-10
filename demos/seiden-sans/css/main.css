@@ -1089,7 +1089,8 @@ header {
     word-break: normal;
     opacity: 0.08;
     text-align: right;
-    letter-spacing: -2vw; }
+    letter-spacing: -2vw;
+    overflow: hidden; }
     #main .background ::-moz-selection {
       background: transparent; }
     #main .background ::selection {
