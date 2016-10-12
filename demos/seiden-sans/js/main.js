@@ -17,6 +17,8 @@ $(document).ready(function() {
         documentFonts.ready.then(function() {
             bodyObj.addClass('fonts-loaded');
         });
+    } else {
+        bodyObj.addClass('fonts-loaded');
     }
     
     /* ----------------------------------------

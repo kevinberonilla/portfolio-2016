@@ -5,8 +5,7 @@
     </ul>
     <div class="title clearfix">
         <h2>Seiden Sans Typeface (2016)</h2>
-        <div class="tools"><img class="tooltip" title="Font Created with BirdFont" src="images/icons/birdfont.svg"></div>
-        <div class="tools"><img class="tooltip" title="Letterforms Created with Illustrator" src="images/icons/illustrator.svg"></div>
+        <div class="tools"><img class="tooltip" title="Letterforms Created with Illustrator" src="images/icons/illustrator.svg"><img class="tooltip" title="Font Created with BirdFont" src="images/icons/birdfont.svg"></div>
     </div>
 </div>
 <div class="project-content">
