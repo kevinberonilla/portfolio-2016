@@ -158,7 +158,7 @@
         <div class="container">&copy;
             <?php echo date('Y'); ?> Kevin Beronilla. All works featured, unless noted as academic or independent, are copyrighted by the respective companies and organizations of which they are a representation of.</div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/jquery.lightSlider.min.js"></script>
     <script src="js/jquery.backgroundcover.min.js"></script>

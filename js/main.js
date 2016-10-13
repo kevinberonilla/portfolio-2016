@@ -168,6 +168,27 @@ documentObj.ready(function() {
         });
     }
     
+    function setCookie(name, value) {
+        document.cookie = name + '=' + value + ';';
+    }
+    
+    function getCookie(name) {
+        var name = name + "=";
+        var cookies = document.cookie.split(';');
+        
+        for (var i = 0; i < cookies.length; i++) {
+            var thisCookie = cookies[i];
+            
+            while (thisCookie.charAt(0) === ' ') {
+                thisCookie = thisCookie.substring(1);
+            }
+            
+            if (thisCookie.indexOf(name) === 0) {
+                return thisCookie.substring(name.length, thisCookie.length);
+            }
+        }
+    }
+    
     function closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent) {
         closeButton.unbind('click');
         documentObj.unbind('keyup', handleKeyup);
@@ -185,9 +206,14 @@ documentObj.ready(function() {
         setTimeout(function() {
             projectContainer.empty();
         }, 250);
-    }	
+    }
     
     function revealHero(projectHero) {
+        if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
+            $('#info-btn').addClass('active');
+            $('.project-content .notes').show();
+        }
+        
         setTimeout(function() {
             projectHero.addClass('active');
         }, 350);
@@ -276,6 +302,12 @@ documentObj.ready(function() {
         $(this).toggleClass('active');
         $('.project-content .notes').stop()
             .slideToggle(150);
+        
+        if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
+            setCookie('should-show-info', 'false');
+        } else {
+            setCookie('should-show-info', 'true');
+        }
     });
 });
 
