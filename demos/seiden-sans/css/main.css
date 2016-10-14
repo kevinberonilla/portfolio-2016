@@ -1521,8 +1521,8 @@ header #kb-logo:focus {
 
 @media only screen and (max-width: 480px) {
   #main #user-text {
-    font-size: 28px;
-    line-height: 42px;
+    font-size: 26px;
+    line-height: 40px;
   }
 }
 
@@ -1550,6 +1550,12 @@ header #kb-logo:focus {
     right: initial;
     margin-top: 16px;
     text-align: left;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #main .button-container .fa {
+    display: none;
   }
 }
 
@@ -1619,6 +1625,13 @@ header #kb-logo:focus {
     line-height: 36px;
     text-align: left;
     margin-bottom: 42px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #about .character-set {
+    font-size: 28px;
+    line-height: 32px;
   }
 }
 

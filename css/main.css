@@ -131,9 +131,9 @@ header nav ul li a:visited,
     text-transform: uppercase;
     padding: 10.5px 12px;
     background-color: #fff;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     -webkit-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
@@ -154,9 +154,9 @@ header .mobile-menu:after {
     display: block;
     padding: 11.5px 12.5px;
     background-color: #fff;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
@@ -275,9 +275,9 @@ header .mobile-menu.active:after {
     width: 240px;
     position: relative;
     top: 1px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     text-align: left;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
@@ -317,9 +317,9 @@ header .mobile-menu.active:after {
     left: 0;
     z-index: 9998;
     width: 240px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
@@ -623,9 +623,9 @@ main.loaded #portfolio li.loaded a:hover .title {
     height: 36px;
     background-color: #fff;
     background-image: none;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
     opacity: 1;
     -webkit-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
@@ -692,7 +692,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     background-color: rgb(246, 139, 31);
 }
 .tooltipster-default {
-    border-radius: 5px;
+    border-radius: 2px;
     border: none;
     background: #fff;
     color: #1e1e1e;
