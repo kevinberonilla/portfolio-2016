@@ -56,4 +56,14 @@ $(document).ready(function() {
             scrollTop: targetPos
         }, 750);
     });
+    
+    /* ----------------------------------------
+    Weight Select Functions
+    ---------------------------------------- */
+    var weight = $('#weight');
+    
+    weight.change(function() {
+        userText.removeClass()
+            .addClass($(this).val());
+    });
 });
