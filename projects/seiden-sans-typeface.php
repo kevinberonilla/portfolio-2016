@@ -20,6 +20,8 @@
             <li><img src="images/seiden-sans-typeface/01.jpg"></li>
             <li><img src="images/seiden-sans-typeface/02.jpg"></li>
             <li><img src="images/seiden-sans-typeface/03.jpg"></li>
+            <li><img src="images/seiden-sans-typeface/04.jpg"></li>
+            <li><img src="images/seiden-sans-typeface/05.jpg"></li>
         </ul>
     </div>
 </div>
