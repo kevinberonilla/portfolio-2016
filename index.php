@@ -28,7 +28,7 @@
             <h1><img src="images/logo.svg" alt="Kevin Beronilla" class="logo"><img src="images/logo-fallback.png" class="logo fallback"></h1>
             <nav>
                 <ul>
-                    <li><a href="docs/kevin-beronilla-resume.pdf" target="_blank">Resume</a></li>
+                    <li><a href="downloads/kevin-beronilla-resume.pdf" target="_blank">Resume</a></li>
                     <li><a href="https://github.com/kevinberonilla" target="_blank">GitHub</a></li>
                     <li><a href="mailto:kevin.beronilla@gmail.com" class="contact-link">Contact</a></li>
                 </ul>
