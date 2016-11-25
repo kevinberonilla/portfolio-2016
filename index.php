@@ -1,4 +1,4 @@
-<?php $resourceVersion = '1.35'; ?>
+<?php $resourceVersion = '1.38'; ?>
 <!doctype html>
 <html>
 
@@ -16,10 +16,6 @@
     <link rel="stylesheet" type="text/css" href="css/lightSlider.min.css">
     <link rel="stylesheet" type="text/css" href="css/tooltipster.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css?v=<?= $resourceVersion ?>">
-    <!--[if lt IE 9]>
-<link rel="stylesheet" type="text/css" href="css/ie.min.css">
-<script src="js/html5shiv.min.js"></script>
-<![endif]-->
 </head>
 
 <body>
@@ -163,7 +159,6 @@
     <script src="js/jquery.lightSlider.min.js"></script>
     <script src="js/jquery.backgroundcover.min.js"></script>
     <script src="js/jquery.tooltipster.min.js"></script>
-    <script src="js/matchMedia.min.js"></script>
     <script src="js/main.min.js?v=<?= $resourceVersion ?>"></script>
     <?php include_once("analyticstracking.php") ?>
 </body>
