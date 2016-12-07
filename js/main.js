@@ -245,15 +245,12 @@ documentObj.ready(function() {
                 totalCount = projectMedia.length;
             
             if (totalCount === 0) {
-                if (typeof(document.fonts) === 'undefined') revealProject(loading, projectHero, projectContent);
-                else document.fonts.ready.then(revealProject(loading, projectHero, projectContent)); // Wait for web fonts to load
-            }
-            else {
-                projectMedia.load(function() {	
+                revealProject(loading, projectHero, projectContent);
+            } else {
+                projectMedia.load(function() {
                     loadCount++;
                     if (loadCount === totalCount) {
-                        if (typeof(document.fonts) === 'undefined') revealProject(loading, projectHero, projectContent);
-                        else document.fonts.ready.then(revealProject(loading, projectHero, projectContent)); // Wait for web fonts to load
+                        revealProject(loading, projectHero, projectContent);
                     }
                 });
             }

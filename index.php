@@ -1,4 +1,4 @@
-<?php $resourceVersion = '1.38'; ?>
+<?php $resourceVersion = '1.39'; ?>
 <!doctype html>
 <html>
 
@@ -24,9 +24,9 @@
             <h1><img src="images/logo.svg" alt="Kevin Beronilla" class="logo"><img src="images/logo-fallback.png" class="logo fallback"></h1>
             <nav>
                 <ul>
-                    <li><a href="downloads/kevin-beronilla-resume.pdf" target="_blank">Resume</a></li>
-                    <li><a href="https://github.com/kevinberonilla" target="_blank">GitHub</a></li>
-                    <li><a href="mailto:kevin.beronilla@gmail.com" class="contact-link">Contact</a></li>
+                    <li><a href="downloads/kevin-beronilla-resume.pdf" target="_blank"><span class="icon fa fa-file-text"></span>Resume</a></li>
+                    <li><a href="https://github.com/kevinberonilla" target="_blank"><span class="icon fa fa-github"></span>GitHub</a></li>
+                    <li><a href="mailto:kevin.beronilla@gmail.com" class="contact-link"><span class="icon fa fa-envelope"></span>Contact</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu"></div>

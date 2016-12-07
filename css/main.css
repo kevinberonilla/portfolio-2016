@@ -141,6 +141,11 @@ header nav ul li a:visited,
 header nav ul li a:hover {
     color: rgb(246, 139, 31);
 }
+header nav ul li a .icon,
+#project .project-hero .project-actions a .icon {
+    display: inline-block;
+    margin-right: 6px;
+}
 header .mobile-menu {
     display: none;
     float: right;
@@ -934,6 +939,10 @@ footer.reveal {
     }
     header nav ul li:first-child {
         margin-left: 0;
+    }
+    header nav ul li a .icon,
+    #project .project-hero .project-actions a .icon {
+        display: none;
     }
     header .mobile-menu {
         display: block;
