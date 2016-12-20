@@ -201,10 +201,10 @@ documentObj.ready(function() {
                 scrollTop: 0,
                 easing: 'ease',
             }, 250)
-            .one('transitionend', emptyContainer);
+            .one('transitionend', emptyContainer)
+            .removeClass('open');
         
         documentBody.removeClass('disable-scroll');
-        header.removeClass('open');
         closeButton.unbind('click');
         documentObj.unbind('keyup', handleKeyup);
         loading.removeClass('active');	
@@ -215,17 +215,15 @@ documentObj.ready(function() {
     function revealProject(loading, projectHero, projectContent) {
         loading.removeClass('active');
         
+        projectContent.addClass('active');
+        
+        if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
+            $('#info-btn').addClass('active');
+            $('.project-content .notes').show();
+        }
+        
         setTimeout(function() {
-            projectContent.addClass('active');
-            
-            if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
-                $('#info-btn').addClass('active');
-                $('.project-content .notes').show();
-            }
-            
-            setTimeout(function() {
-                projectHero.addClass('active');
-            }, 100);
+            projectHero.addClass('active');
         }, 100);
     }
     
@@ -267,31 +265,32 @@ documentObj.ready(function() {
         
         documentObj.keyup(handleKeyup);
     }
+    
+    function requestFiles(project) {
+        loading.addClass('active');
+        
+        projectContainer.load('projects/' + project + '.php', function(response, status) {
+            if (status === 'error') requestFiles('not-found');
+        });
+        
+        documentObj.ajaxComplete(initProject);
+    }
 	
-	function getProject(entry) {
-		var project = entry.replace(/[\/,#,!]/g, '');
+	function getProject(projectPath) {
+		var project = projectPath.replace(/[\/,#,!]/g, '');
 		
 		documentBody.addClass('disable-scroll');
-		header.addClass('open');
-        
-        setTimeout(function() {
-            loading.addClass('active');
-            
-            projectContainer.load('projects/' + project + '.php', function(response, status) {
-                if (status === 'error') getProject('not-found');
-            });
-            
-            documentObj.ajaxComplete(initProject);
-        }, 250);
+        header.one('transitionend', requestFiles(project))
+            .addClass('open');
 	}
 	
 	if (hashValue) windowObj.load(getProject(hashValue)); // If URL has anchor
 	
-	portfolioItem.click(function(e) {		
-		var project = $(this).attr('href');
+	portfolioItem.click(function(e) {
+		var projectPath = $(this).attr('href');
 		
 		e.preventDefault();
-		getProject(project);
+		getProject(projectPath);
 	});
     
     documentBody.on('click', '#info-btn', function(e) {
