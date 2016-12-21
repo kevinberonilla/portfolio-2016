@@ -213,14 +213,13 @@ documentObj.ready(function() {
     }
     
     function revealProject(loading, projectHero, projectContent) {
-        loading.removeClass('active');
-        
-        projectContent.addClass('active');
-        
         if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
             $('#info-btn').addClass('active');
             $('.project-content .notes').show();
         }
+        
+        loading.removeClass('active');
+        projectContent.addClass('active');
         
         setTimeout(function() {
             projectHero.addClass('active');
@@ -280,7 +279,9 @@ documentObj.ready(function() {
 		var project = projectPath.replace(/[\/,#,!]/g, '');
 		
 		documentBody.addClass('disable-scroll');
-        header.one('transitionend', requestFiles(project))
+        header.one('transitionend', function() {
+                requestFiles(project);
+            })
             .addClass('open');
 	}
 	

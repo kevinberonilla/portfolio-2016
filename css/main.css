@@ -458,11 +458,11 @@ main.loaded #portfolio li.loaded a:hover .title {
     opacity: 0;
     z-index: 9999;
     pointer-events: none;
-    -webkit-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -ms-transition: all 250ms ease;
-    -o-transition: all 250ms ease;
-    transition: all 250ms ease;
+    -webkit-transition: all 250ms ease 50ms;
+    -moz-transition: all 250ms ease 50ms;
+    -ms-transition: all 250ms ease 50ms;
+    -o-transition: all 250ms ease 50ms;
+    transition: all 250ms ease 50ms;
 }
 #loading.active {
     opacity: 1;
