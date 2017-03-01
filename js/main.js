@@ -182,13 +182,9 @@ documentObj.ready(function() {
         for (var i = 0; i < cookies.length; i++) {
             var thisCookie = cookies[i];
             
-            while (thisCookie.charAt(0) === ' ') {
-                thisCookie = thisCookie.substring(1);
-            }
+            while (thisCookie.charAt(0) === ' ') thisCookie = thisCookie.substring(1);
             
-            if (thisCookie.indexOf(name) === 0) {
-                return thisCookie.substring(name.length, thisCookie.length);
-            }
+            if (thisCookie.indexOf(name) === 0) return thisCookie.substring(name.length, thisCookie.length);
         }
     }
     
@@ -241,9 +237,8 @@ documentObj.ready(function() {
             var loadCount = 0,
                 totalCount = projectMedia.length;
             
-            if (totalCount === 0) {
-                revealProject(loading, projectHero, projectContent);
-            } else {
+            if (totalCount === 0) revealProject(loading, projectHero, projectContent);
+            else {
                 projectMedia.load(function() {
                     loadCount++;
                     if (loadCount === totalCount) {
@@ -300,11 +295,8 @@ documentObj.ready(function() {
         $('.project-content .notes').stop()
             .slideToggle(150);
         
-        if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
-            setCookie('should-show-info', 'false');
-        } else {
-            setCookie('should-show-info', 'true');
-        }
+        if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') setCookie('should-show-info', 'false');
+        else setCookie('should-show-info', 'true');
     });
 });
 
