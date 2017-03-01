@@ -59,6 +59,9 @@
     </div>
     <main>
         <ul id="portfolio">
+            <li class="project gd web">
+                <a href="#!/strike-library"><img src="images/strike-library/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Strike Library (2017)</span></a>
+            </li>
             <li class="project gd">
                 <a href="#!/seiden-sans-typeface"><img src="images/seiden-sans-typeface/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Seiden Sans Typeface (2016)</span></a>
             </li>
@@ -145,9 +148,11 @@
             <li class="project video">
                 <a href="#!/fight-club-opening-credits"><img src="images/fight-club-opening-credits/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Fight Club Opening Credits (2008)</span></a>
             </li>
+            <?php /*
             <li class="project gd">
                 <a href="#!/20twelve-logo"><img src="images/20twelve-logo/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">20twelve Logo (2007)</span></a>
             </li>
+            */ ?>
         </ul>
     </main>
     <footer>
