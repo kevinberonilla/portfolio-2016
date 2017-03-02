@@ -1,6 +1,6 @@
 <div class="project-hero" style="background-image: url(images/lab-medicine-magazine/hero-bg.jpg)">
     <ul class="project-actions clearfix">
-        <li><a href="#" id="info-btn"></a></li>
+        <?php /*<li><a href="#" id="info-btn"></a></li>*/ ?>
         <li><a href="#" id="close-btn"></a></li>
     </ul>
     <div class="title clearfix">
