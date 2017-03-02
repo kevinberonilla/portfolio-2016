@@ -145,8 +145,8 @@ documentObj.ready(function() {
         projectContainer = $('#project'),
         hashValue = window.location.hash;
         
-    function initializePlugins(sliderElement, tooltip) {
-        if (!sliderElement.length) {
+    function initPlugins() {
+        if (!$('.lSSlideOuter').length) {
             $('#project .project-content .images ul').lightSlider({ // LightSlider initialize
                 adaptiveHeight: true,
                 speed: 250,
@@ -159,7 +159,7 @@ documentObj.ready(function() {
             });
         }
         
-        tooltip.tooltipster({ // Tootipster initialize
+        $('.tooltip').tooltipster({ // Tootipster initialize
             animation: 'grow',
             position: 'top',
             delay: 0,
@@ -171,7 +171,7 @@ documentObj.ready(function() {
         });
     }
     
-    function setCookie(name, value) {
+    /*function setCookie(name, value) {
         document.cookie = name + '=' + value + ';';
     }
     
@@ -186,7 +186,7 @@ documentObj.ready(function() {
             
             if (thisCookie.indexOf(name) === 0) return thisCookie.substring(name.length, thisCookie.length);
         }
-    }
+    }*/
     
     function closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent) {
         var emptyContainer = function() {
@@ -209,23 +209,23 @@ documentObj.ready(function() {
     }
     
     function revealProject(loading, projectHero, projectContent) {
-        if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
+        /*if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
             $('#info-btn').addClass('active');
             $('.project-content .notes').show();
-        }
+        }*/
         
-        loading.removeClass('active');
-        projectContent.addClass('active');
-        
-        setTimeout(function() {
-            projectHero.addClass('active');
+        setTimeout(function() { // Fixes transition cancel
+            loading.removeClass('active');
+            projectContent.addClass('active');
+            
+            setTimeout(function() {
+                projectHero.addClass('active');
+            }, 100);
         }, 100);
     }
     
     function initProject() {
-        var sliderElement = $('.lSSlideOuter'),
-            tooltip = $('.tooltip'),
-            projectMedia = $('#project img, #project iframe'),
+        var projectMedia = $('#project img, #project iframe'),
             projectHero = $('.project-hero'),
             projectContent = $('.project-content'),
             closeButton = $('#close-btn'),
@@ -233,7 +233,7 @@ documentObj.ready(function() {
                 if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If Esc key is pressed on loaded project
             }
         
-        $.when(initializePlugins(sliderElement, tooltip)).done(function() {
+        $.when(initPlugins()).done(function() {
             var loadCount = 0,
                 totalCount = projectMedia.length;
             
@@ -241,7 +241,7 @@ documentObj.ready(function() {
             else {
                 projectMedia.load(function() {
                     loadCount++;
-                    if (loadCount === totalCount) {
+                    if (loadCount >= totalCount) {
                         revealProject(loading, projectHero, projectContent);
                     }
                 });
@@ -266,8 +266,6 @@ documentObj.ready(function() {
         projectContainer.load('projects/' + project + '.php', function(response, status) {
             if (status === 'error') requestFiles('not-found');
         });
-        
-        documentObj.ajaxComplete(initProject);
     }
 	
 	function getProject(projectPath) {
@@ -279,6 +277,8 @@ documentObj.ready(function() {
             })
             .addClass('open');
 	}
+        
+    documentObj.ajaxComplete(initProject);
 	
 	if (hashValue) windowObj.load(getProject(hashValue)); // If URL has anchor
 	
@@ -295,8 +295,8 @@ documentObj.ready(function() {
         $('.project-content .notes').stop()
             .slideToggle(150);
         
-        if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') setCookie('should-show-info', 'false');
-        else setCookie('should-show-info', 'true');
+        /*if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') setCookie('should-show-info', 'false');
+        else setCookie('should-show-info', 'true');*/
     });
 });
 

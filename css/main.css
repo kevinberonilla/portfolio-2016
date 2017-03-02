@@ -598,7 +598,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     padding: 25px 30px;
     color: #fff;
     background-color: #1e1e1e;
-    display: none;
+    /*display: none;*/
 }
 #project .project-content .images,
 #project .project-content .videos,
