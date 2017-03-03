@@ -263,9 +263,28 @@ documentObj.ready(function() {
     function requestFiles(project) {
         loading.addClass('active');
         
-        projectContainer.load('projects/' + project + '.php', function(response, status) {
-            if (status === 'error') requestFiles('not-found');
-        });
+        var request = $.ajax({
+                url: 'projects/' + project + '.php',
+                success: function(data) {
+                    documentObj.unbind(keyup, handleKeyup);
+                    projectContainer.html(data);
+                    initProject();
+                },
+                error: function() {
+                    requestFiles('not-found');
+                }
+            });
+        
+        var handleKeyup = function(e) {
+                if (e.keyCode === 27) { // If Esc key is pressed while loading project
+                    request.abort();
+                    loading.removeClass('active');
+                    
+                    documentObj.unbind(keyup, handleKeyup);
+                }
+            }
+        
+        documentObj.keyup(handleKeyup);
     }
 	
 	function getProject(projectPath) {
@@ -277,8 +296,6 @@ documentObj.ready(function() {
             })
             .addClass('open');
 	}
-        
-    documentObj.ajaxComplete(initProject);
 	
 	if (hashValue) windowObj.load(getProject(hashValue)); // If URL has anchor
 	

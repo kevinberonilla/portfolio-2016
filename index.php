@@ -164,7 +164,7 @@
     <script src="js/jquery.lightSlider.min.js"></script>
     <script src="js/jquery.backgroundcover.min.js"></script>
     <script src="js/jquery.tooltipster.min.js"></script>
-    <script src="js/main.min.js?v=<?= $resourceVersion ?>"></script>
+    <script src="js/main.js?v=<?= $resourceVersion ?>"></script>
     <?php include_once("analyticstracking.php") ?>
 </body>
 
