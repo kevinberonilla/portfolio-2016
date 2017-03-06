@@ -266,7 +266,6 @@ documentObj.ready(function() {
         var request = $.ajax({
                 url: 'projects/' + project + '.php',
                 success: function(data) {
-                    documentObj.unbind(keyup, handleKeyup);
                     projectContainer.html(data);
                     initProject();
                 },
@@ -275,16 +274,16 @@ documentObj.ready(function() {
                 }
             });
         
-        var handleKeyup = function(e) {
+        var handleLoadingKeyup = function(e) {
                 if (e.keyCode === 27) { // If Esc key is pressed while loading project
                     request.abort();
                     loading.removeClass('active');
-                    
-                    documentObj.unbind(keyup, handleKeyup);
+                    header.removeClass('open');                    
+                    documentObj.unbind('keyup', handleLoadingKeyup);
                 }
             }
         
-        documentObj.keyup(handleKeyup);
+        documentObj.keyup(handleLoadingKeyup);
     }
 	
 	function getProject(projectPath) {
