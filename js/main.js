@@ -255,7 +255,7 @@ $(document).ready(function() {
             if (e.target === this && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If clicked outside of loaded project
         });
         
-        $(document).keyup(handleKeyup);
+        $(document).one('keyup', handleKeyup);
     }
     
     function requestFiles(project) {
@@ -275,13 +275,15 @@ $(document).ready(function() {
         var handleLoadingKeyup = function(e) {
                 if (e.keyCode === 27) { // If Esc key is pressed while loading project
                     request.abort();
-                    loading.removeClass('active');
-                    header.removeClass('open');                    
+                    projectContainer.empty();
                     $(document).unbind('keyup', handleLoadingKeyup);
+                    documentBody.removeClass('disable-scroll');
+                    loading.removeClass('active');
+                    header.removeClass('open');
                 }
             }
         
-        $(document).keyup(handleLoadingKeyup);
+        $(document).one('keyup', handleLoadingKeyup);
     }
 	
 	function getProject(projectPath) {
