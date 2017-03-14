@@ -16,5 +16,10 @@
         <p><strong>Git:</strong> <a href="http://github.com/appiphony/Strike-Components" target="_blank">github.com/appiphony/Strike-Components</a></p>
         <p><strong>Demo:</strong> <a href="http://www.lightninmagstrike.io" target="_blank">www.lightningstrike.io</a></p>
     </div>
-    <div class="images"><img src="images/strike-library/01.jpg"></div>
+    <div class="images">
+        <ul>
+            <li><img src="images/strike-library/01.jpg"></li>
+            <li><img src="images/strike-library/02.jpg"></li>
+        </ul>
+    </div>
 </div>

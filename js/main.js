@@ -1,9 +1,7 @@
 /* ----------------------------------------
 Global Variables
 ---------------------------------------- */
-var windowObj = $(window),
-    documentObj = $(document),
-    documentBody = $(document.body),
+var documentBody = $(document.body),
     mainView = $('html, body'),
     isMobile = false,
     mobileUserAgentString = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i,
@@ -18,7 +16,7 @@ if (mobileUserAgentString.test(navigator.userAgent)) {
 /* ----------------------------------------
 Page Refresh Functions
 ---------------------------------------- */
-documentObj.ready(function() {
+$(document).ready(function() {
 	var contactLink = $('.contact-link'),
         contactClicked = false;
     
@@ -28,7 +26,7 @@ documentObj.ready(function() {
 		contactClicked = true;
 	});
 	
-	windowObj.on('beforeunload unload pagehide', function() {
+	$(window).on('beforeunload unload pagehide', function() {
 		if (!contactClicked) { // Ignore event if contact button is clicked
             mainView.scrollTop(0);
             documentBody.hide();
@@ -39,7 +37,7 @@ documentObj.ready(function() {
 /* ----------------------------------------
 Page Load Functions
 ---------------------------------------- */
-documentObj.ready(function() {
+$(document).ready(function() {
 	var portfolioImages = $('#portfolio li a img'),
         mainContainer = $('main'),
         heroRegion = $('#hero'),
@@ -76,7 +74,7 @@ documentObj.ready(function() {
         footer.addClass('reveal');
     } else loading.addClass('active');
 	
-	windowObj.load(function() {
+	$(window).load(function() {
 		loading.removeClass('active');
 		
 		setTimeout(function() {
@@ -99,7 +97,7 @@ documentObj.ready(function() {
 /* ----------------------------------------
 Filter Functions
 ---------------------------------------- */
-documentObj.ready(function() {
+$(document).ready(function() {
 	var portfolio = $('#portfolio'),
         dropDown = $('.drop-down'),
         dropDownOptions = $('.options'),
@@ -139,7 +137,7 @@ documentObj.ready(function() {
 /* ----------------------------------------
 Portfolio Functions
 ---------------------------------------- */
-documentObj.ready(function() {
+$(document).ready(function() {
 	var header = $('header'),
         portfolioItem = $('#portfolio li a'),
         projectContainer = $('#project'),
@@ -202,7 +200,7 @@ documentObj.ready(function() {
         
         documentBody.removeClass('disable-scroll');
         closeButton.unbind('click');
-        documentObj.unbind('keyup', handleKeyup);
+        $(document).unbind('keyup', handleKeyup);
         loading.removeClass('active');	
         projectHero.removeClass('active');
         projectContent.removeClass('active');
@@ -257,7 +255,7 @@ documentObj.ready(function() {
             if (e.target === this && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If clicked outside of loaded project
         });
         
-        documentObj.keyup(handleKeyup);
+        $(document).keyup(handleKeyup);
     }
     
     function requestFiles(project) {
@@ -279,11 +277,11 @@ documentObj.ready(function() {
                     request.abort();
                     loading.removeClass('active');
                     header.removeClass('open');                    
-                    documentObj.unbind('keyup', handleLoadingKeyup);
+                    $(document).unbind('keyup', handleLoadingKeyup);
                 }
             }
         
-        documentObj.keyup(handleLoadingKeyup);
+        $(document).keyup(handleLoadingKeyup);
     }
 	
 	function getProject(projectPath) {
@@ -296,7 +294,7 @@ documentObj.ready(function() {
             .addClass('open');
 	}
 	
-	if (hashValue) windowObj.load(getProject(hashValue)); // If URL has anchor
+	if (hashValue) $(window).load(getProject(hashValue)); // If URL has anchor
 	
 	portfolioItem.click(function(e) {
 		var projectPath = $(this).attr('href');
@@ -319,7 +317,7 @@ documentObj.ready(function() {
 /* ----------------------------------------
 Logo Functions
 ---------------------------------------- */
-documentObj.ready(function() {
+$(document).ready(function() {
 	var logo = $('.logo');
 	
 	logo.click(function() {
@@ -332,7 +330,7 @@ documentObj.ready(function() {
 /* ----------------------------------------
 Mobile Menu Functions
 ---------------------------------------- */
-documentObj.ready(function() {
+$(document).ready(function() {
 	var mobileMenu = $('.mobile-menu'),
         switchingContent = $('header h1, header nav');
 	
@@ -345,6 +343,6 @@ documentObj.ready(function() {
 /* ----------------------------------------
 Background Cover Initialize
 ---------------------------------------- */
-documentObj.ready(function() {
+$(document).ready(function() {
 	$('.background-cover').backgroundCover();
 });

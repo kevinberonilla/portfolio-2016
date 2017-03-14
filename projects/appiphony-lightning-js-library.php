@@ -16,5 +16,10 @@
         <p><strong>Git:</strong> <a href="http://github.com/appiphony/appiphony-lightning-js" target="_blank">github.com/appiphony/appiphony-lightning-js</a></p>
         <p><strong>Demo:</strong> <a href="http://aljs.appiphony.com" target="_blank">aljs.appiphony.com</a></p>
     </div>
-    <div class="images"><img src="images/appiphony-lightning-js-library/01.jpg"></div>
+    <div class="images">
+        <ul>
+            <li><img src="images/appiphony-lightning-js-library/01.jpg"></li>
+            <li><img src="images/appiphony-lightning-js-library/02.jpg"></li>
+        </ul>
+    </div>
 </div>
