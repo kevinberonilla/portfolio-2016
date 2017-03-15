@@ -495,7 +495,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     animation-delay: -160ms;
 }
 #project {
-    margin-top: 30px;
+    margin-top: 32px;
 }
 #project .project-hero,
 #project .project-content {
@@ -986,6 +986,9 @@ footer.reveal {
         -ms-transition: none;
         -o-transition: none;
         transition: none;
+    }
+    #project {
+        margin-top: 27px;
     }
     #project .project-hero {
         height: 180px;
