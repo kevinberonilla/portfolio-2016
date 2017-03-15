@@ -251,11 +251,11 @@ $(document).ready(function() {
         var handleLoadingKeyup = function(e) {
                 if (e.keyCode === 27) { // If Esc key is pressed while loading project
                     request.abort();
-                    projectContainer.empty();
                     $(document).unbind('keyup', handleLoadingKeyup);
                     documentBody.removeClass('disable-scroll');
                     loading.removeClass('active');
                     header.removeClass('open');
+                    projectContainer.empty();
                 }
             }
         

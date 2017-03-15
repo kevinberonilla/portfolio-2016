@@ -97,6 +97,7 @@ header.open {
 }
 header h1 {
     display: inline-block;
+    line-height: 0;
     float: left;
     margin-top: 29px;
 }
@@ -494,7 +495,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     animation-delay: -160ms;
 }
 #project {
-    margin-top: 22px;
+    margin-top: 30px;
 }
 #project .project-hero,
 #project .project-content {
@@ -907,10 +908,10 @@ footer.reveal {
         transform: ;
     }
     header h1.switch {
-        left: -180px;
+        left: -200px;
     }
     header h1 .logo {
-        height: 30px;
+        height: 33px;
     }
     header nav {
         margin-top: 27px;
