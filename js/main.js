@@ -130,8 +130,8 @@ $(document).ready(function() {
 	});
 	
 	markup.click(function() {
-		if (dropDownOptions.hasClass('open')) dropDownOptions.removeClass('open');
-	});
+        if (dropDownOptions.hasClass('open')) dropDownOptions.removeClass('open');
+    });
 });
 
 /* ----------------------------------------
@@ -169,32 +169,15 @@ $(document).ready(function() {
         });
     }
     
-    /*function setCookie(name, value) {
-        document.cookie = name + '=' + value + ';';
-    }
-    
-    function getCookie(name) {
-        var name = name + "=";
-        var cookies = document.cookie.split(';');
-        
-        for (var i = 0; i < cookies.length; i++) {
-            var thisCookie = cookies[i];
-            
-            while (thisCookie.charAt(0) === ' ') thisCookie = thisCookie.substring(1);
-            
-            if (thisCookie.indexOf(name) === 0) return thisCookie.substring(name.length, thisCookie.length);
-        }
-    }*/
-    
     function closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent) {
         var emptyContainer = function() {
             projectContainer.empty();
         };
         
         header.animate({
-                scrollTop: 0,
-                easing: 'ease',
-            }, 250)
+            scrollTop: 0,
+            easing: 'ease',
+        }, 250)
             .one('transitionend', emptyContainer)
             .removeClass('open');
         
@@ -207,11 +190,6 @@ $(document).ready(function() {
     }
     
     function revealProject(loading, projectHero, projectContent) {
-        /*if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') {
-            $('#info-btn').addClass('active');
-            $('.project-content .notes').show();
-        }*/
-        
         setTimeout(function() { // Fixes transition cancel
             loading.removeClass('active');
             projectContent.addClass('active');
@@ -239,9 +217,7 @@ $(document).ready(function() {
             else {
                 projectMedia.load(function() {
                     loadCount++;
-                    if (loadCount >= totalCount) {
-                        revealProject(loading, projectHero, projectContent);
-                    }
+                    if (loadCount >= totalCount) revealProject(loading, projectHero, projectContent);
                 });
             }
         });
@@ -255,7 +231,7 @@ $(document).ready(function() {
             if (e.target === this && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If clicked outside of loaded project
         });
         
-        $(document).one('keyup', handleKeyup);
+        $(document).keyup(handleKeyup);
     }
     
     function requestFiles(project) {
@@ -291,8 +267,8 @@ $(document).ready(function() {
 		
 		documentBody.addClass('disable-scroll');
         header.one('transitionend', function() {
-                requestFiles(project);
-            })
+            requestFiles(project);
+        })
             .addClass('open');
 	}
 	
@@ -310,9 +286,6 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         $('.project-content .notes').stop()
             .slideToggle(150);
-        
-        /*if (getCookie('should-show-info') === 'true' || typeof(getCookie('should-show-info')) === 'undefined') setCookie('should-show-info', 'false');
-        else setCookie('should-show-info', 'true');*/
     });
 });
 

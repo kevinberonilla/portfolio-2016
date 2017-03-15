@@ -1,4 +1,4 @@
-<?php $resourceVersion = '1.44'; ?>
+<?php $resourceVersion = '1.45'; ?>
 <!doctype html>
 <html>
 
