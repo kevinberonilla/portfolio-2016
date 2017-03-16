@@ -316,8 +316,8 @@ $(document).ready(function() {
 });
 
 /* ----------------------------------------
-Background Cover Initialize
+Object Fit Polyfill
 ---------------------------------------- */
 $(document).ready(function() {
-	$('.background-cover').backgroundCover();
+    if (typeof(document.documentElement.style.objectFit) === 'undefined') $('.background-cover').backgroundCover();
 });
