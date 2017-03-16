@@ -206,7 +206,7 @@ $(document).ready(function() {
             projectContent = $('.project-content'),
             closeButton = $('#close-btn'),
             handleKeyup = function(e) {
-                if (e.keyCode === 27 && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If Esc key is pressed on loaded project
+                if (e.which === 27 && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If Esc key is pressed on loaded project
             }
         
         $.when(initPlugins()).done(function() {
@@ -249,7 +249,7 @@ $(document).ready(function() {
             });
         
         var handleLoadingKeyup = function(e) {
-                if (e.keyCode === 27) { // If Esc key is pressed while loading project
+                if (e.which === 27) { // If Esc key is pressed while loading project
                     request.abort();
                     $(document).unbind('keyup', handleLoadingKeyup);
                     documentBody.removeClass('disable-scroll');
