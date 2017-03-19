@@ -1,17 +1,21 @@
 /* ----------------------------------------
-Global Variables
+Exposed Variables
 ---------------------------------------- */
 var documentBody = $(document.body),
     mainView = $('html, body'),
+    msBrowserRegex = /MSIE|Edge|Trident/,
+    mobileRegex = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i,
+    userAgentString = navigator.userAgent,
     isMobile = false,
-    mobileUserAgentString = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i,
     loading;
 
-if (mobileUserAgentString.test(navigator.userAgent)) {
+if (mobileRegex.test(userAgentString)) {
     isMobile = true;
     
     documentBody.addClass('mobile');
 }
+
+if (msBrowserRegex.test(userAgentString)) documentBody.addClass('ms-browser');;
 
 /* ----------------------------------------
 Page Refresh Functions

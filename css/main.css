@@ -223,7 +223,7 @@ header .mobile-menu.active:after {
     z-index: 2;
     bottom: 162px;
     right: 0;
-    padding-left: 28px;
+    padding: 0 0 2px 28px;
     margin-bottom: 120px;
     border-left: 1px solid rgb(246, 139, 31);
     overflow: hidden;
@@ -234,10 +234,12 @@ header .mobile-menu.active:after {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
-#hero .container .intro.loaded {
+#hero .container .intro.loaded,
+body.ms-browser #hero .container .intro {
     overflow: visible;
 }
-#hero .container .intro.reveal {
+#hero .container .intro.reveal,
+body.ms-browser #hero .container .intro {
     margin-bottom: 0;
     opacity: 1;
 }
@@ -251,7 +253,8 @@ header .mobile-menu.active:after {
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
-#hero .container .intro .slide-in.reveal {
+#hero .container .intro .slide-in.reveal,
+body.ms-browser #hero .container .intro .slide-in {
     left: 0;
 }
 #hero .container .intro strong {
