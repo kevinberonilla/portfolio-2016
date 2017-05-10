@@ -10,7 +10,7 @@
 </div>
 <div class="project-content">
     <div class="notes">
-        <p><strong>Client:</strong> Sasha &amp; Irena Savic</p>
+        <p><strong>Client:</strong> Sasha and Irena Savic</p>
         <p><strong>Involvement:</strong> Photography, Post-Processing</p>
     </div>
     <div class="images">

@@ -10,7 +10,7 @@
 </div>
 <div class="project-content">
     <div class="notes">
-        <p><strong>Clients:</strong> Private Clients &amp; <a href="http://jdmchicago.com" target="_blank">JDM Chicago</a></p>
+        <p><strong>Clients:</strong> Private Clients and <a href="http://jdmchicago.com" target="_blank">JDM Chicago</a></p>
         <p><strong>Involvement:</strong> Photography, Post-Processing</p>
     </div>
     <div class="images">

@@ -12,7 +12,7 @@
     <div class="notes">
         <p><strong>Client:</strong> American Society for Clinical Pathology (ASCP)</p>
         <p><strong>Involvement:</strong> Graphic Design</p>
-        <p><strong>Credits:</strong> Original Concept &amp; Art Direction by Nam Nguyen</p>
+        <p><strong>Credits:</strong> Original Concept and Art Direction by Nam Nguyen</p>
     </div>
     <div class="images"><img src="images/70-rocks-logo/01.jpg"></div>
 </div>

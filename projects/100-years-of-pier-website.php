@@ -12,7 +12,7 @@
     <div class="notes">
         <p><strong>Client:</strong> Navy Pier</p>
         <p><strong>Involvement:</strong> Front-End Development</p>
-        <p><strong>Credits:</strong> Original Concept &amp; Graphic Design by <a href="http://www.twoxfour.com" target="_blank">Two by Four</a>, Art Direction by <a href="http://freydesigngroup.com" target="_blank">Jason Frey</a></p>
+        <p><strong>Credits:</strong> Original Concept and Graphic Design by <a href="http://www.twoxfour.com" target="_blank">Two by Four</a>, Art Direction by <a href="http://freydesigngroup.com" target="_blank">Jason Frey</a></p>
         <p><strong>Git:</strong> <a href="https://github.com/kevinberonilla/100-years-of-pier" target="_blank">github.com/kevinberonilla/100-years-of-pier</a></p>
         <p><strong>Live Site:</strong> <a href="http://100yearsofpier.com" target="_blank">100yearsofpier.com</a></p>
     </div>
