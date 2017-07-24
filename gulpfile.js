@@ -1,7 +1,7 @@
-var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
-    minifyCss = require('gulp-minify-css'),
-    rename = require('gulp-rename');
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-minify-css');
+var rename = require('gulp-rename');
 
 gulp.task('minify-css', function() {
     return gulp.src(['./css/**/*.css', '!./css/**/*.min.css'])
