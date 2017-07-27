@@ -1,4 +1,4 @@
-<?php $resourceVersion = '1.53'; ?>
+<?php $resourceVersion = '1.54'; ?>
 <!doctype html>
 <html>
 
@@ -78,6 +78,9 @@
                 <a href="#!/webegin-visualforce-framework"><img src="images/webegin-visualforce-framework/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Webegin for Visualforce Framework (2015)</span></a>
             </li>
             <li class="project web">
+                <a href="#!/centerpoint-properties-website"><img src="images/centerpoint-properties-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">CenterPoint Properties Website (2015)</span></a>
+            </li>
+            <li class="project web">
                 <a href="#!/navy-pier-website"><img src="images/navy-pier-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Navy Pier Website (2015)</span></a>
             </li>
             <li class="project gd">
@@ -92,11 +95,9 @@
             <li class="project gd">
                 <a href="#!/debrock-wedding-website"><img src="images/debrock-wedding-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">DeBrock Wedding Website (2014)</span></a>
             </li>
-            <?php /*
             <li class="project gd web">
                 <a href="#!/modern-way-cleaners-website"><img src="images/modern-way-cleaners-website/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Modern Way Cleaners Website (2014)</span></a>
             </li>
-            */ ?>
             <li class="project gd">
                 <a href="#!/central-park-lisle-logo"><img src="images/central-park-lisle-logo/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Central Park of Lisle Logo (2014)</span></a>
             </li>
@@ -148,11 +149,9 @@
             <li class="project video">
                 <a href="#!/fight-club-opening-credits"><img src="images/fight-club-opening-credits/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">Fight Club Opening Credits (2008)</span></a>
             </li>
-            <?php /*
             <li class="project gd">
                 <a href="#!/20twelve-logo"><img src="images/20twelve-logo/thumb.jpg" width="600" height="400" class="background-cover"><span class="title">20twelve Logo (2007)</span></a>
             </li>
-            */ ?>
         </ul>
     </main>
     <footer>

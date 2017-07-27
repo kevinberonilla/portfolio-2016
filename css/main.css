@@ -784,6 +784,12 @@ footer.reveal {
     main #portfolio li a {
         height: 240px;
     }
+    #project .project-hero .title h2 {
+        float: none;
+    }
+    #project .project-hero .title .tools {
+        float: none;
+    }
 }
 @media only screen and (max-width: 1040px) {
     .container {
@@ -863,6 +869,9 @@ footer.reveal {
     }
     #project .project-hero .title h2 {
         font-size: 26px;
+    }
+    #project .project-hero .title .tools {
+        margin-top: 5px;
     }
     #project .project-hero .title .tools img {
         margin-left: 8px;
@@ -1008,12 +1017,7 @@ footer.reveal {
         padding: 10px 15px 12px 15px;
     }
     #project .project-hero .title h2 {
-        float: none;
         font-size: 20px;
-    }
-    #project .project-hero .title .tools {
-        float: none;
-        margin-top: 5px;
     }
     #project .project-hero .title .tools img {
         margin: 0 5px 0 0;
