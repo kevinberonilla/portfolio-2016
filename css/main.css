@@ -430,7 +430,7 @@ main #portfolio li a img {
 }
 main #portfolio li a .title {
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(30, 30, 30, 0.8);
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -572,7 +572,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     color: rgb(246, 139, 31);
 }
 #project .project-hero .title {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(30, 30, 30, 0.8);
     padding: 20px 30px;
     position: absolute;
     width: 100%;
@@ -987,9 +987,7 @@ footer.reveal {
         display: none;
     }
     main #portfolio li {
-        width: 100%;
         height: 240px;
-        float: none;
     }
     main #portfolio li a {
         height: 240px;
@@ -1038,6 +1036,12 @@ footer.reveal {
     }
     #project .project-content .images .lSSlideOuter .lSPager.lSpg {
         margin-top: 15px !important;
+    }
+}
+@media only screen and (max-width: 640px) {
+    main #portfolio li {
+        width: 100%;
+        float: none;
     }
 }
 @media only screen and (max-width: 460px) {
