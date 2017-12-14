@@ -242,7 +242,7 @@ $(document).ready(function() {
         loading.addClass('active');
         
         var request = $.ajax({
-                url: 'projects/' + project + '.php',
+                url: 'projects/' + project + '.html',
                 success: function(data) {
                     projectContainer.html(data);
                     initProject();
