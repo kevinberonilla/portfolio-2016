@@ -1,13 +1,13 @@
 /* ----------------------------------------
 Exposed Variables
 ---------------------------------------- */
-var documentBody = $(document.body),
-    mainView = $('html, body'),
-    msBrowserRegex = /MSIE|Edge|Trident/,
-    mobileRegex = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i,
-    userAgentString = navigator.userAgent,
-    isMobile = false,
-    loading;
+var documentBody = $(document.body);
+var mainView = $('html, body');
+var msBrowserRegex = /MSIE|Edge|Trident/;
+var mobileRegex = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i;
+var userAgentString = navigator.userAgent;
+var isMobile = false;
+var loading;
 
 if (mobileRegex.test(userAgentString)) {
     isMobile = true;
@@ -21,8 +21,8 @@ if (msBrowserRegex.test(userAgentString)) documentBody.addClass('ms-browser');;
 Page Refresh Functions
 ---------------------------------------- */
 $(document).ready(function() {
-	var contactLink = $('.contact-link'),
-        contactClicked = false;
+	var contactLink = $('.contact-link');
+    var contactClicked = false;
     
     mainView.scrollTop(0);
     
@@ -42,13 +42,13 @@ $(document).ready(function() {
 Page Load Functions
 ---------------------------------------- */
 $(document).ready(function() {
-	var portfolioImages = $('#portfolio li a img'),
-        mainContainer = $('main'),
-        heroRegion = $('#hero'),
-        heroContainer = $('#hero .container'),
-        intro = $('.intro'),
-        introSlideIn = $('.slide-in'),
-        footer = $('footer');
+    var portfolioImages = $('#portfolio li a img');
+    var mainContainer = $('main');
+    var heroRegion = $('#hero');
+    var heroContainer = $('#hero .container');
+    var intro = $('.intro');
+    var introSlideIn = $('.slide-in');
+    var footer = $('footer');
 	
 	loading = $('#loading');
 	
@@ -102,12 +102,12 @@ $(document).ready(function() {
 Filter Functions
 ---------------------------------------- */
 $(document).ready(function() {
-	var portfolio = $('#portfolio'),
-        dropDown = $('.drop-down'),
-        dropDownOptions = $('.options'),
-        dropDownOptionsItem = $('.options li'),
-        dropDownSelected = $('#selected'),
-        markup = $('html');
+    var portfolio = $('#portfolio');
+    var dropDown = $('.drop-down');
+    var dropDownOptions = $('.options');
+    var dropDownOptionsItem = $('.options li');
+    var dropDownSelected = $('#selected');
+    var markup = $('html');
 	
 	portfolio.isotope({ // Isotope initialize
 		itemSelector: '.project',
@@ -126,8 +126,8 @@ $(document).ready(function() {
 	});
 	
 	dropDownOptionsItem.click(function() {
-		var theOption = $(this).attr('class'),
-            theContent = $(this).html();
+		var theOption = $(this).attr('class');
+        var theContent = $(this).html();
         
 		dropDownSelected.html(theContent);
 		filterPortfolio(theOption)
@@ -142,10 +142,10 @@ $(document).ready(function() {
 Portfolio Functions
 ---------------------------------------- */
 $(document).ready(function() {
-	var header = $('header'),
-        portfolioItem = $('#portfolio li a'),
-        projectContainer = $('#project'),
-        hashValue = window.location.hash;
+        var header = $('header');
+        var portfolioItem = $('#portfolio li a');
+        var projectContainer = $('#project');
+        var hashValue = window.location.hash;
         
     function initPlugins() {
         if (!$('.lSSlideOuter').length) {
@@ -205,17 +205,17 @@ $(document).ready(function() {
     }
     
     function initProject() {
-        var projectMedia = $('#project img, #project iframe'),
-            projectHero = $('.project-hero'),
-            projectContent = $('.project-content'),
-            closeButton = $('#close-btn'),
-            handleKeyup = function(e) {
-                if (e.which === 27 && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If Esc key is pressed on loaded project
-            }
+        var projectMedia = $('#project img, #project iframe');
+        var projectHero = $('.project-hero');
+        var projectContent = $('.project-content');
+        var closeButton = $('#close-btn');
+        var handleKeyup = function(e) {
+            if (e.which === 27 && projectHero.hasClass('active')) closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent); // If Esc key is pressed on loaded project
+        };
         
         $.when(initPlugins()).done(function() {
-            var loadCount = 0,
-                totalCount = projectMedia.length;
+            var loadCount = 0;
+            var totalCount = projectMedia.length;
             
             if (totalCount === 0) revealProject(loading, projectHero, projectContent);
             else {
@@ -307,11 +307,21 @@ $(document).ready(function() {
 });
 
 /* ----------------------------------------
+Copyright Year Functions
+---------------------------------------- */
+$(document).ready(function() {
+    var copyrightYear = $('.copyright-year');
+    var currentYear = new Date().getFullYear();
+    
+    copyrightYear.text(currentYear);
+});
+
+/* ----------------------------------------
 Mobile Menu Functions
 ---------------------------------------- */
 $(document).ready(function() {
-	var mobileMenu = $('.mobile-menu'),
-        switchingContent = $('header h1, header nav');
+	var mobileMenu = $('.mobile-menu');
+    var switchingContent = $('header h1, header nav');
 	
 	mobileMenu.click(function() {
 		mobileMenu.toggleClass('active');
