@@ -2,13 +2,13 @@
 jQuery Quick Modal v1.08
 
 By Kevin Beronilla
-http://www.kevinberonilla.com
+https://www.kevinberonilla.com
 
 Fork on GitHub
 https://github.com/kevinberonilla/jquery-quick-modal
 
 Free to use under the MIT license
-http://www.opensource.org/licenses/mit-license.php
+https://www.opensource.org/licenses/mit-license.php
 -------------------------------------------------- */
 (function($) { // Protect the $ alias (IIF)
     $.fn.setSpeed = function(speed) {

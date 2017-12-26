@@ -2,13 +2,13 @@
 jQuery Cheat Code v1.04
 
 By Kevin Beronilla
-http://www.kevinberonilla.com
+https://www.kevinberonilla.com
 
 Fork on GitHub
 https://github.com/kevinberonilla/jquery-cheat-code
 
 Free to use under the MIT license
-http://www.opensource.org/licenses/mit-license.php
+https://www.opensource.org/licenses/mit-license.php
 -------------------------------------------------- */
 (function($) { // Protect the $ alias (IIF)
     $.fn.cheatCode = function(options) {
