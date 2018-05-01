@@ -154,7 +154,7 @@ $(document).ready(function() {
                 speed: 250,
                 item: 1,
                 slideMargin: 15,
-                loop: false,
+                loop: true,
                 pager: true,
                 galleryMargin: 30,
                 keyPress: true
