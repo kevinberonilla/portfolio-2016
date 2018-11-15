@@ -62,15 +62,15 @@ $(document).ready(function() {
         footer.addClass('reveal');
     }
     
-    function revealIntro() {
-        introSlideIn.one('transitionend', endAnimationSequence)
-            .addClass('reveal');
+    function slideInIntroContent() {
+        introSlideIn.addClass('reveal');
+        setTimeout(endAnimationSequence, 500);
     };
     
-    function revealHero() {
+    function revealHeroAndIntro() {
         heroRegion.addClass('reveal');
-        intro.one('transitionend', revealIntro)
-            .addClass('reveal');
+        intro.addClass('reveal');
+        setTimeout(slideInIntroContent, 250);
     };
 	
 	if (window.matchMedia('(max-width: 740px)').matches) {
@@ -82,7 +82,7 @@ $(document).ready(function() {
 		loading.removeClass('active');
 		
 		setTimeout(function() {
-			heroContainer.one('transitionend', revealHero)
+			heroContainer.one('transitionend', revealHeroAndIntro)
                 .removeClass('closed');
 		}, 1000);
 		
