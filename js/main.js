@@ -85,8 +85,8 @@
             loading.removeClass('active');
 
             setTimeout(function() {
-                heroContainer.one('transitionend', revealHeroAndIntro)
-                    .removeClass('closed');
+                heroContainer.removeClass('closed');
+                setTimeout(revealHeroAndIntro, 500);
             }, 1000);
 
             portfolioImages.each(function() {
