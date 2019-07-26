@@ -1,44 +1,43 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
-var cssnano = require('gulp-cssnano');
-var rename = require('gulp-rename');
-var runSequence = require('run-sequence');
+const { src, dest, parallel, series, watch } = require('gulp');
+const sourcemaps = require('gulp-sourcemaps');
+const rename = require('gulp-rename');
+const cssnano = require('gulp-cssnano');
+const uglify = require('gulp-uglify');
+const browserSync = require('browser-sync');
 
-gulp.task('init:browserSync', () => {
+function minifyCss() {
+    return src(['./css/**/*.css', '!./css/**/*.min.css'])
+        .pipe(cssnano())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(dest('./css'));
+}
+
+function minifyJs() {
+    return src(['./js/**/*.js', '!./js/**/*.min.js'])
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(dest('./js'));
+}
+
+function initBrowserSync() {
     browserSync({
-        open: true,
-        notify: false,
-        once: true,
-        port: 8080,
-        files: ['./css/**/*.css', './js/**/*.js', './**/*.html', './images/**/*.{jpg,jpeg,png,gif,svg}'],
-        reloadDebounce: 1000,
+        files: ['./css/**/*.css', './js/**/*.js', './images/**/*', './**/*.html'],
         server: {
             baseDir: './'
-        }
+        },
+        port: 80,
+        open: true,
+        notify: false
     });
-});
+}
 
-gulp.task('minify:css', () => {
-    return gulp.src(['./css/**/*.css', '!./css/**/*.min.css'])
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(cssnano({ compatibility: 'ie8' }))
-        .pipe(gulp.dest('./css'))
-});
+function initWatch() {
+    watch(['./css/**/*.css', '!./css/**/*.min.css'], minifyCss);
+    watch(['./js/**/*.js', '!./js/**/*.min.js'], minifyJs);
+}
 
-gulp.task('minify:js', () => {
-    return gulp.src(['./js/**/*.js', '!./js/**/*.min.js'])
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
-        .pipe(gulp.dest('./js'))
-});
-
-gulp.task('init:watch', () => {
-    gulp.watch(['./css/**/*.css', '!./css/**/*.min.css'], ['minify:css']);
-    gulp.watch(['./js/**/*.js', '!./js/**/*.min.js'], ['minify:js']);
-});
-
-gulp.task('default', () => {
-    return runSequence(['minify:css', 'minify:js'], ['init:browserSync', 'init:watch']);
-});
+exports.default = series(minifyCss, minifyJs, parallel(initBrowserSync, initWatch));
