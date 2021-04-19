@@ -2,7 +2,7 @@
 jQuery Quick Modal v1.08
 
 By Kevin Beronilla
-http://www.kevinberonilla.com
+https://kevinberonilla.com
 
 Fork on GitHub
 https://github.com/kevinberonilla/jquery-quick-modal
