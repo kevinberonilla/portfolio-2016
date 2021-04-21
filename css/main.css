@@ -998,6 +998,12 @@ footer.reveal {
         width: 100%;
         left: 0;
     }
+    #hero .container .intro .drop-down .options.open {
+        height: 144px;
+    }
+    #hero .container .intro .drop-down .options li {
+        padding: 6px 14px;
+    }
     #hero .container #hero-photo {
         display: none;
     }
@@ -1068,7 +1074,7 @@ footer.reveal {
         display: block;
     }
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
     #hero .container .intro {
         line-height: 16px;
         bottom: 76px;
