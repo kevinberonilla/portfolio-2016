@@ -903,6 +903,12 @@ footer.reveal {
     #hero .container .intro {
         width: 520px;
     }
+    #hero .container .intro .drop-down .options.open {
+        height: 144px;
+    }
+    #hero .container .intro .drop-down .options li {
+        padding: 6px 14px;
+    }
     #hero .container .intro .slide-in {
         width: 520px;
     }
@@ -997,12 +1003,6 @@ footer.reveal {
     #hero .container .intro .slide-in {
         width: 100%;
         left: 0;
-    }
-    #hero .container .intro .drop-down .options.open {
-        height: 144px;
-    }
-    #hero .container .intro .drop-down .options li {
-        padding: 6px 14px;
     }
     #hero .container #hero-photo {
         display: none;
