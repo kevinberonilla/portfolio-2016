@@ -610,6 +610,9 @@ main.loaded #portfolio li.loaded a:hover .title {
     background-color: #1e1e1e;
     /*display: none;*/
 }
+#project .project-content .notes .year {
+    display: none;
+}
 #project .project-content .images,
 #project .project-content .videos,
 #project .project-content .text {
@@ -1045,6 +1048,9 @@ footer.reveal {
         font-size: 14px;
         line-height: 20px;
     }
+    #project .project-content .images .lSSlideOuter .lSPager.lSpg {
+        bottom: 15px;
+    }
 }
 @media only screen and (max-width: 620px) {
     main #portfolio li,
@@ -1054,11 +1060,15 @@ footer.reveal {
     main #portfolio li a .title {
         font-size: 11px;
     }
-    main #portfolio li a .year {
+    main #portfolio li a .year,
+    #project .project-hero .title .year {
         display: none;
     }
+    #project .project-content .notes .year {
+        display: block;
+    }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 460px) {
     #hero .container .intro {
         line-height: 16px;
         bottom: 76px;
