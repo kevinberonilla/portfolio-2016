@@ -1046,13 +1046,19 @@ footer.reveal {
         line-height: 20px;
     }
 }
-@media only screen and (max-width: 640px) {
-    main #portfolio li {
-        width: 100%;
-        float: none;
+@media only screen and (max-width: 620px) {
+    main #portfolio li,
+    main #portfolio li a {
+        height: 160px;
+    }
+    main #portfolio li a .title {
+        font-size: 11px;
+    }
+    main #portfolio li a .year {
+        display: none;
     }
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
     #hero .container .intro {
         line-height: 16px;
         bottom: 76px;
@@ -1067,6 +1073,17 @@ footer.reveal {
     }
     #hero .container .intro .drop-down {
         top: -5px;
+    }
+    main #portfolio li,
+    main #portfolio li a {
+        height: 200px;
+    }
+    main #portfolio li {
+        width: 100%;
+        float: none;
+    }
+    main #portfolio li a .year {
+        display: inline;
     }
 }
 @media only print {
