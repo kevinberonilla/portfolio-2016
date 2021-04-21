@@ -430,7 +430,7 @@ main #portfolio li a img {
 }
 main #portfolio li a .title {
     padding: 15px;
-    background-color: rgba(30, 30, 30, 0.8);
+    background-color: rgba(20, 20, 20, 0.85);
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -528,7 +528,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     transform: translateY(0);
 }
 #project .project-hero {
-    height: 240px;
+    height: 190px;
     position: relative;
     background-size: cover;
     background-position: center center;
@@ -572,7 +572,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     color: rgb(246, 139, 31);
 }
 #project .project-hero .title {
-    background-color: rgba(30, 30, 30, 0.8);
+    background-color: rgba(20, 20, 20, 0.85);
     padding: 20px 30px;
     position: absolute;
     width: 100%;
@@ -580,16 +580,18 @@ main.loaded #portfolio li.loaded a:hover .title {
 }
 #project .project-hero .title h2 {
     font-size: 36px;
+    line-height: 1.5;
     font-weight: 300;
     letter-spacing: -0.25px;
     display: inline-block;
-    float: left;
     color: #fff;
-    margin-top: 2px;
+    /* float: left;
+    margin-top: 2px; */
 }
 #project .project-hero .title .tools {
-    float: right;
-    display: block;
+    /* float: right;
+    display: block; */
+    display: none;
 }
 #project .project-hero .title .tools img {
     display: inline-block;
@@ -611,7 +613,6 @@ main.loaded #portfolio li.loaded a:hover .title {
 #project .project-content .images,
 #project .project-content .videos,
 #project .project-content .text {
-    padding: 30px;
     position: relative;
 }
 #project .project-content .images img {
@@ -647,11 +648,11 @@ main.loaded #portfolio li.loaded a:hover .title {
 }
 #project .project-content .images .lSPrev {
     padding: 12px 12.5px;
-    left: 15px;
+    left: 30px;
 }
 #project .project-content .images .lSNext {
     padding: 12px 13.5px;
-    right: 15px;
+    right: 30px;
 }
 #project .project-content .images .lSPrev:after,
 #project .project-content .images .lSNext:after {
@@ -671,6 +672,17 @@ main.loaded #portfolio li.loaded a:hover .title {
 #project .project-content .images .lSPrev:hover:after,
 #project .project-content .images .lSNext:hover:after {
     color: rgb(246, 139, 31);
+}
+#project .project-content .images .lSSlideOuter .lSPager.lSpg {
+    line-height: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 0 !important;
+    padding: 5px;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) !important;
 }
 #project .project-content .videos .embed-container {
     position: relative;
@@ -866,7 +878,7 @@ footer.reveal {
         bottom: 0;
     }
     #project .project-hero {
-        height: 220px;
+        height: 175px;
     }
     #project .project-hero .title h2 {
         font-size: 26px;
@@ -1004,7 +1016,7 @@ footer.reveal {
         padding: 0 15px;
     }
     #project .project-hero {
-        height: 145px;
+        height: 118px;
     }
     #project .project-hero .project-actions {
         top: 15px;
@@ -1029,17 +1041,9 @@ footer.reveal {
     #project .project-content .notes {
         padding: 12px 15px 14px 15px;
     }
-    #project .project-content .images,
-    #project .project-content .videos,
-    #project .project-content .text {
-        padding: 15px;
-    }
     #project .project-content .text {
         font-size: 14px;
         line-height: 20px;
-    }
-    #project .project-content .images .lSSlideOuter .lSPager.lSpg {
-        margin-top: 15px !important;
     }
 }
 @media only screen and (max-width: 640px) {
