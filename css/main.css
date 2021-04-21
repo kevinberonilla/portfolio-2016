@@ -674,11 +674,11 @@ main.loaded #portfolio li.loaded a:hover .title {
     color: rgb(246, 139, 31);
 }
 #project .project-content .images .lSSlideOuter .lSPager.lSpg {
-    line-height: 1;
+    line-height: 0;
     background-color: rgba(255, 255, 255, 0.5);
     margin-top: 0 !important;
-    padding: 5px;
-    border-radius: 15px;
+    padding: 6px 4px;
+    border-radius: 12px;
     position: absolute;
     bottom: 30px;
     left: 50%;
