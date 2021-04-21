@@ -339,15 +339,15 @@ body.ms-browser #hero .container .intro .slide-in {
     overflow: hidden;
 }
 #hero .container .intro .drop-down .options.open {
-    height: 188px;
-    padding: 6px 0 8px 0;
+    height: 208px;
+    padding: 8px 0 10px 0;
 }
 #hero .container .intro .drop-down .options li {
     display: block;
     font-size: 22px;
     line-height: 22px;
     color: #fff;
-    padding: 6px 16px;
+    padding: 8px 16px;
     margin: 0;
     cursor: pointer;
     -webkit-transition: all 250ms ease;
@@ -783,7 +783,7 @@ footer.reveal {
         width: 210px;
     }
     #hero .container .intro .drop-down .options.open {
-        height: 178px;
+        height: 196px;
     }
     #hero .container .intro .drop-down .options li {
         font-size: 20px;
