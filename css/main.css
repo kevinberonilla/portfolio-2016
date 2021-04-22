@@ -452,6 +452,9 @@ main.loaded #portfolio li a:hover img {
     -webkit-filter: grayscale(0) brightness(1);
     filter: grayscale(0) brightness(1);
 }
+main.loaded #portfolio li.loaded a:hover .title {
+    bottom: 0;
+}
 #loading {
     width: auto;
     text-align: center;
@@ -532,7 +535,7 @@ main.loaded #portfolio li a:hover img {
 }
 #project .project-hero .title {
     background-color: rgba(30, 30, 30, 0.8);
-    padding: 20px 30px;
+    padding: 30px;
     display: flex;
     align-content: space-between;
 }
@@ -540,7 +543,7 @@ main.loaded #portfolio li a:hover img {
     flex: 1 1 auto;
     font-size: 36px;
     padding-right: 10px;
-    line-height: 1.5;
+    line-height: 1;
     font-weight: 300;
     letter-spacing: -0.25px;
     display: inline-block;
@@ -585,7 +588,7 @@ main.loaded #portfolio li a:hover img {
     margin-bottom: 30px;
 }
 #project .project-content .notes {
-    padding: 25px 30px;
+    padding: 28px 30px 30px 30px;
     color: #fff;
     background-color: #1e1e1e;
     /*display: none;*/
@@ -981,7 +984,7 @@ footer.reveal {
         padding: 0 15px;
     }
     #project .project-hero .title {
-        padding: 10px 15px 12px 15px;
+        padding: 15px;
     }
     #project .project-hero .title .project-actions #info-btn.active:hover {
         color: #1e1e1e;
@@ -990,7 +993,7 @@ footer.reveal {
         margin-bottom: 15px;
     }
     #project .project-content .notes {
-        padding: 12px 15px 14px 15px;
+        padding: 13px 15px 15px 15px;
     }
     #project .project-content .text {
         font-size: 14px;
