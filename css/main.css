@@ -123,8 +123,8 @@ header nav ul li {
 }
 header nav ul li a,
 header nav ul li a:visited,
-#project .project-hero .project-actions a,
-#project .project-hero .project-actions a:visited {
+#project .project-hero .title .project-actions a,
+#project .project-hero .title .project-actions a:visited {
     display: inline-block;
     color: #1e1e1e;
     font-size: 12px;
@@ -143,7 +143,7 @@ header nav ul li a:hover {
     color: rgb(246, 139, 31);
 }
 header nav ul li a .icon,
-#project .project-hero .project-actions a .icon {
+#project .project-hero .title .project-actions a .icon {
     display: inline-block;
     margin-right: 6px;
 }
@@ -452,9 +452,6 @@ main.loaded #portfolio li a:hover img {
     -webkit-filter: grayscale(0) brightness(1);
     filter: grayscale(0) brightness(1);
 }
-main.loaded #portfolio li.loaded a:hover .title {
-    bottom: 0;
-}
 #loading {
     width: auto;
     text-align: center;
@@ -528,77 +525,60 @@ main.loaded #portfolio li.loaded a:hover .title {
     transform: translateY(0);
 }
 #project .project-hero {
-    height: 190px;
     position: relative;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
-#project .project-hero .project-actions {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    list-style: none;
-}
-#project .project-hero .project-actions li {
-    float: left;
-    display: block;
-    margin-left: 10px;
-}
-#project .project-hero .project-actions #close-btn {
-    padding: 10.5px 13.5px;
-}
-#project .project-hero .project-actions #info-btn {
-    padding: 10.5px 16px;
-}
-#project .project-hero .project-actions #info-btn.active {
-    color: #1e1e1e;
-    background-color: rgb(246, 139, 31);
-}
-#project .project-hero .project-actions #info-btn.active:hover {
-    color: #fff;
-}
-#project .project-hero .project-actions #close-btn:after,
-#project .project-hero .project-actions #info-btn:after {
-    font-family: FontAwesome;
-    content: '\f00d';
-}
-#project .project-hero .project-actions #info-btn:after {
-    content: '\f129';
-}
-#project .project-hero .project-actions #close-btn:hover,
-#project .project-hero .project-actions #info-btn:hover {
-    color: rgb(246, 139, 31);
-}
 #project .project-hero .title {
     background-color: rgba(30, 30, 30, 0.8);
     padding: 20px 30px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    display: flex;
+    align-content: space-between;
 }
 #project .project-hero .title h2 {
+    flex: 1 1 auto;
     font-size: 36px;
+    padding-right: 10px;
     line-height: 1.5;
     font-weight: 300;
     letter-spacing: -0.25px;
     display: inline-block;
     color: #fff;
-    /* float: left;
-    margin-top: 2px; */
 }
-#project .project-hero .title .tools {
-    /* float: right;
-    display: block; */
-    display: none;
+#project .project-hero .title .project-actions {
+    display: block;
+    list-style: none;
 }
-#project .project-hero .title .tools img {
-    display: inline-block;
-    margin: 8px 0 0 10px;
-    height: 36px;
-    width: auto;
-    max-width: 80px;
+#project .project-hero .title .project-actions li {
+    float: left;
+    display: block;
+    margin-left: 10px;
+}
+#project .project-hero .title .project-actions #close-btn {
+    padding: 10.5px 13.5px;
+}
+#project .project-hero .title .project-actions #info-btn {
+    padding: 10.5px 16px;
+}
+#project .project-hero .title .project-actions #info-btn.active {
+    color: #1e1e1e;
+    background-color: rgb(246, 139, 31);
+}
+#project .project-hero .title .project-actions #info-btn.active:hover {
+    color: #fff;
+}
+#project .project-hero .title .project-actions #close-btn:after,
+#project .project-hero .title .project-actions #info-btn:after {
+    font-family: FontAwesome;
+    content: '\f00d';
+}
+#project .project-hero .title .project-actions #info-btn:after {
+    content: '\f129';
+}
+#project .project-hero .title .project-actions #close-btn:hover,
+#project .project-hero .title .project-actions #info-btn:hover {
+    color: rgb(246, 139, 31);
 }
 #project .project-content {
     background-color: #fff;
@@ -720,17 +700,6 @@ main.loaded #portfolio li.loaded a:hover .title {
 .lSSlideOuter .lSPager.lSpg > li.active a {
     background-color: rgb(246, 139, 31);
 }
-.tooltipster-default {
-    border-radius: 2px;
-    border: none;
-    background: #fff;
-    color: #1e1e1e;
-}
-.tooltipster-default .tooltipster-content {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 14px;
-    padding: 10px 12px;
-}
 footer {
     background-color: #1e1e1e;
     color: #fff;
@@ -798,13 +767,6 @@ footer.reveal {
     }
     main #portfolio li a {
         height: 240px;
-    }
-    #project .project-hero .title h2 {
-        float: none;
-    }
-    #project .project-hero .title .tools {
-        margin-top: 5px;
-        float: none;
     }
 }
 @media only screen and (max-width: 1040px) {
@@ -880,15 +842,9 @@ footer.reveal {
     main #portfolio li a .title {
         bottom: 0;
     }
-    #project .project-hero {
-        height: 175px;
-    }
     #project .project-hero .title h2 {
         font-size: 26px;
-    }
-    #project .project-hero .title .tools img {
-        margin-left: 8px;
-        height: 28px;
+        line-height: 1.375;
     }
     #project .project-content .text {
         font-size: 16px;
@@ -977,7 +933,7 @@ footer.reveal {
         margin-left: 0;
     }
     header nav ul li a .icon,
-    #project .project-hero .project-actions a .icon {
+    #project .project-hero .title .project-actions a .icon {
         display: none;
     }
     header .mobile-menu {
@@ -1024,24 +980,10 @@ footer.reveal {
         margin-top: 27px;
         padding: 0 15px;
     }
-    #project .project-hero {
-        height: 118px;
-    }
-    #project .project-hero .project-actions {
-        top: 15px;
-        right: 15px;
-    }
     #project .project-hero .title {
         padding: 10px 15px 12px 15px;
     }
-    #project .project-hero .title h2 {
-        font-size: 20px;
-    }
-    #project .project-hero .title .tools img {
-        margin: 0 5px 0 0;
-        height: 18px;
-    }
-    #project .project-hero .project-actions #info-btn.active:hover {
+    #project .project-hero .title .project-actions #info-btn.active:hover {
         color: #1e1e1e;
     }
     #project .project-content {

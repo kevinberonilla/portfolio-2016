@@ -163,17 +163,6 @@
                     keyPress: true
                 });
             }
-
-            $('.tooltip').tooltipster({ // Tootipster initialize
-                animation: 'grow',
-                position: 'top',
-                delay: 0,
-                speed: 200,
-                theme: 'tooltipster-default',
-                touchDevices: true,
-                trigger: 'hover',
-                debug: false
-            });
         }
 
         function closeHeader(closeButton, handleKeyup, loading, header, projectHero, projectContent) {
