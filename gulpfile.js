@@ -1,5 +1,4 @@
 const { src, dest, parallel, series, watch } = require('gulp');
-const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const cssnano = require('gulp-cssnano');
 const uglify = require('gulp-uglify');
