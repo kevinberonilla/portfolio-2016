@@ -3,21 +3,25 @@
     100% {
         -webkit-transform: scale(0.25) translateY(-75px);
     }
+    
     50% {
         -webkit-transform: scale(1) translateY(0);
     }
 }
+
 @keyframes load-bounce {
     0%,
     100% {
         transform: scale(0.25) translateY(-75px);
         -webkit-transform: scale(0.25) translateY(-75px);
     }
+    
     50% {
         transform: scale(1) translateY(0);
         -webkit-transform: scale(1) translateY(0);
     }
 }
+
 * {
     padding: 0;
     border: none;
@@ -25,26 +29,32 @@
     box-sizing: border-box;
     outline: none;
 }
-body,
+
 html {
+    --kb-font-stack-display: 'Source Sans Pro', sans-serif;
+    --kb-font-stack-body: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+
+html,
+body {
     width: 100%;
     height: 100%;
 }
+
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    font-family: var(--kb-font-stack-body);
     font-size: 14px;
+    font-weight: 300;
     background-color: #000;
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
 body.disable-scroll {
     overflow-y: hidden;
     -webkit-overflow-scrolling: none;
 }
+
 a,
 a:visited {
     color: rgb(246, 139, 31);
@@ -56,27 +66,34 @@ a:visited {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 a:hover {
     color: #fff;
 }
+
 a:focus {
     outline: none;
 }
+
 ::selection {
     background: #ff9d1d;
 }
+
 ::-moz-selection {
     background: #ff9d1d;
 }
+
 .container {
     width: 1200px;
     margin: 0 auto;
 }
+
 .clearfix:after {
     content: '';
     display: table;
     clear: both;
 }
+
 header {
     overflow: hidden;
     width: 100%;
@@ -91,40 +108,49 @@ header {
     -o-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
     transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
 }
+
 header.open {
     overflow: auto;
     height: 100%;
 }
+
 header h1 {
-    display: inline-block;
+    font-family: var(--kb-font-stack-display);
     line-height: 0;
     float: left;
     margin-top: 29px;
 }
+
 header h1 .logo {
     height: 40px;
     width: auto;
     cursor: pointer;
 }
+
 header h1 .logo.fallback {
     display: none;
 }
+
 header nav {
     display: block;
     float: right;
     margin-top: 32px;
 }
+
 header nav ul {
     list-style: none;
 }
+
 header nav ul li {
     float: left;
     margin-left: 10px;
 }
+
 header nav ul li a,
 header nav ul li a:visited,
 #project .project-hero .title .project-actions a,
 #project .project-hero .title .project-actions a:visited {
+    font-family: var(--kb-font-stack-display);
     display: inline-block;
     color: #1e1e1e;
     font-size: 12px;
@@ -139,19 +165,23 @@ header nav ul li a:visited,
     -moz-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
 }
+
 header nav ul li a:hover {
     color: rgb(246, 139, 31);
 }
+
 header nav ul li a .icon,
 #project .project-hero .title .project-actions a .icon {
     display: inline-block;
     margin-right: 6px;
 }
+
 header .mobile-menu {
     display: none;
     float: right;
     margin-top: 27px;
 }
+
 header .mobile-menu:after {
     font-family: FontAwesome;
     font-size: 12px;
@@ -172,13 +202,16 @@ header .mobile-menu:after {
     -moz-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
 }
+
 header .mobile-menu.active:after {
     color: #1e1e1e;
     background-color: rgb(246, 139, 31);
 }
+
 #hero {
     position: relative;
 }
+
 #hero:after {
     content: '';
     background: url(../images/hero-bg.jpg) no-repeat center center;
@@ -194,9 +227,11 @@ header .mobile-menu.active:after {
     transition: opacity 1500ms ease;
     opacity: 0;
 }
+
 #hero.reveal:after {
     opacity: 0.25;
 }
+
 #hero .container {
     position: relative;
     z-index: 9998;
@@ -208,14 +243,16 @@ header .mobile-menu.active:after {
     transition: all 500ms ease;
     opacity: 1;
 }
+
 #hero .container.closed {
     height: 100px;
     opacity: 0;
 }
+
 #hero .container .intro {
     width: 720px;
-    font-size: 28px;
-    line-height: 48px;
+    font-size: 26px;
+    line-height: 40px;
     font-weight: 300;
     letter-spacing: -0.25px;
     color: #fff;
@@ -234,15 +271,18 @@ header .mobile-menu.active:after {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 #hero .container .intro.loaded,
 body.ms-browser #hero .container .intro {
     overflow: visible;
 }
+
 #hero .container .intro.reveal,
 body.ms-browser #hero .container .intro {
     margin-bottom: 0;
     opacity: 1;
 }
+
 #hero .container .intro .slide-in {
     width: 720px;
     position: relative;
@@ -253,11 +293,14 @@ body.ms-browser #hero .container .intro {
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
+
 #hero .container .intro .slide-in.reveal,
 body.ms-browser #hero .container .intro .slide-in {
     left: 0;
 }
+
 #hero .container .intro strong {
+    font-family: var(--kb-font-stack-display);
     font-size: 64px;
     display: inline-block;
     margin: 16px 0 14px 0;
@@ -267,23 +310,21 @@ body.ms-browser #hero .container .intro .slide-in {
     position: relative;
     left: -2px;
 }
+
 #hero .container .intro .reponsive-break {
     display: none;
 }
+
 #hero .container .intro .drop-down {
-    font-size: 24px;
-    line-height: 48px;
     font-weight: 700;
     font-style: normal;
     color: rgb(60, 60, 60);
     background-color: #fff;
     display: inline-block;
     vertical-align: top;
-    padding: 0 16px 1px 16px;
+    padding: 0 46px 1px 16px;
     margin: 0 6px;
-    width: 205px;
     position: relative;
-    top: 1px;
     cursor: pointer;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -295,9 +336,11 @@ body.ms-browser #hero .container .intro .slide-in {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 #hero .container .intro .drop-down:hover {
     color: rgb(246, 139, 31);
 }
+
 #hero .container .intro .drop-down:after {
     content: '';
     display: block;
@@ -308,25 +351,28 @@ body.ms-browser #hero .container .intro .slide-in {
     border-color: rgb(60, 60, 60) transparent transparent transparent;
     position: absolute;
     right: 16px;
-    top: 21px;
+    top: 50%;
+    transform: translateY(-50%);
     -webkit-transition: all 250ms ease;
     -moz-transition: all 250ms ease;
     -ms-transition: all 250ms ease;
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 #hero .container .intro .drop-down:hover:after {
     border-color: rgb(246, 139, 31) transparent transparent transparent;
 }
+
 #hero .container .intro .drop-down .options {
     list-style: none;
     background-color: #1e1e1e;
     font-weight: 300;
     position: absolute;
-    top: 58px;
+    top: calc(100% + 5px);
     left: 0;
     z-index: 9998;
-    width: 205px;
+    width: 100%;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
@@ -338,10 +384,12 @@ body.ms-browser #hero .container .intro .slide-in {
     height: 0;
     overflow: hidden;
 }
+
 #hero .container .intro .drop-down .options.open {
     height: 208px;
     padding: 8px 0 10px 0;
 }
+
 #hero .container .intro .drop-down .options li {
     display: block;
     font-size: 22px;
@@ -356,9 +404,11 @@ body.ms-browser #hero .container .intro .slide-in {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 #hero .container .intro .drop-down .options li:hover {
     color: rgb(246, 139, 31);
 }
+
 #hero .container #hero-photo {
     position: absolute;
     z-index: 9998;
@@ -372,18 +422,22 @@ body.ms-browser #hero .container .intro .slide-in {
     transition: all 2000ms ease;
     opacity: 1;
 }
+
 #hero .container.closed #hero-photo {
     opacity: 0;
 }
+
 main #portfolio {
     list-style: none;
     padding: 0;
 }
+
 main #portfolio li {
     float: left;
     width: 25%;
     height: 260px;
 }
+
 main #portfolio li a {
     display: block;
     width: 100%;
@@ -401,10 +455,12 @@ main #portfolio li a {
     margin-top: 60px;
     pointer-events: none;
 }
+
 main #portfolio li.loaded a {
     opacity: 1;
     margin-top: 0;
 }
+
 main.loaded #portfolio li a {
     -webkit-transition: none;
     -moz-transition: none;
@@ -412,6 +468,7 @@ main.loaded #portfolio li a {
     -o-transition: none;
     transition: none;
 }
+
 main #portfolio li a img,
 main #portfolio li a .title {
     -webkit-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
@@ -420,6 +477,7 @@ main #portfolio li a .title {
     -o-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
     transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
 }
+
 main #portfolio li a img {
     display: block;
     width: 100%;
@@ -428,7 +486,9 @@ main #portfolio li a img {
     -webkit-filter: grayscale(0.25) brightness(0.75);
     filter: grayscale(0.25) brightness(0.75);
 }
+
 main #portfolio li a .title {
+    font-weight: 300;
     padding: 15px;
     background-color: rgba(30, 30, 30, 0.8);
     display: block;
@@ -440,9 +500,11 @@ main #portfolio li a .title {
     left: 0;
     width: 100%;
 }
+
 main.loaded #portfolio li a {
     pointer-events: all;
 }
+
 main.loaded #portfolio li a:hover img {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -452,9 +514,11 @@ main.loaded #portfolio li a:hover img {
     -webkit-filter: grayscale(0) brightness(1);
     filter: grayscale(0) brightness(1);
 }
+
 main.loaded #portfolio li.loaded a:hover .title {
     bottom: 0;
 }
+
 #loading {
     width: auto;
     text-align: center;
@@ -472,9 +536,11 @@ main.loaded #portfolio li.loaded a:hover .title {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 #loading.active {
     opacity: 1;
 }
+
 #loading > div {
     width: 18px;
     height: 18px;
@@ -489,21 +555,26 @@ main.loaded #portfolio li.loaded a:hover .title {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
+
 #loading.active > div {
     -webkit-animation-play-state: running;
     animation-play-state: running;
 }
+
 #loading .bounce-1 {
     -webkit-animation-delay: -320ms;
     animation-delay: -320ms;
 }
+
 #loading .bounce-2 {
     -webkit-animation-delay: -160ms;
     animation-delay: -160ms;
 }
+
 #project {
     margin-top: 32px;
 }
+
 #project .project-hero,
 #project .project-content {
     opacity: 0;
@@ -516,8 +587,8 @@ main.loaded #portfolio li.loaded a:hover .title {
     -webkit-transform: translateY(100px);
     -o-transform: translateY(100px);
     -ms-transform: translateY(100px);
-    transform: translateY(100px);    
 }
+
 #project .project-hero.active,
 #project .project-content.active {
     opacity: 1;
@@ -527,19 +598,23 @@ main.loaded #portfolio li.loaded a:hover .title {
     -ms-transform: translateY(0);
     transform: translateY(0);
 }
+
 #project .project-hero {
     position: relative;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 #project .project-hero .title {
     background-color: rgba(30, 30, 30, 0.8);
     padding: 30px;
     display: flex;
     align-content: space-between;
 }
+
 #project .project-hero .title h2 {
+    font-family: var(--kb-font-stack-display);
     flex: 1 1 auto;
     font-size: 36px;
     padding-right: 10px;
@@ -549,70 +624,87 @@ main.loaded #portfolio li.loaded a:hover .title {
     display: inline-block;
     color: #fff;
 }
+
 #project .project-hero .title .project-actions {
     display: block;
     list-style: none;
 }
+
 #project .project-hero .title .project-actions li {
     float: left;
     display: block;
     margin-left: 10px;
 }
+
 #project .project-hero .title .project-actions #close-btn {
     padding: 10.5px 13.5px;
 }
+
 #project .project-hero .title .project-actions #info-btn {
     padding: 10.5px 16px;
 }
+
 #project .project-hero .title .project-actions #info-btn.active {
     color: #1e1e1e;
     background-color: rgb(246, 139, 31);
 }
+
 #project .project-hero .title .project-actions #info-btn.active:hover {
     color: #fff;
 }
+
 #project .project-hero .title .project-actions #close-btn:after,
 #project .project-hero .title .project-actions #info-btn:after {
     font-family: FontAwesome;
     content: '\f00d';
 }
+
 #project .project-hero .title .project-actions #info-btn:after {
     content: '\f129';
 }
+
 #project .project-hero .title .project-actions #close-btn:hover,
 #project .project-hero .title .project-actions #info-btn:hover {
     color: rgb(246, 139, 31);
 }
+
 #project .project-content {
     background-color: #fff;
     margin-bottom: 30px;
 }
+
 #project .project-content .notes {
+    line-height: 1.5;
     padding: 28px 30px 30px 30px;
     color: #fff;
     background-color: #1e1e1e;
-    /*display: none;*/
 }
+
 #project .project-content .notes .year {
     display: none;
 }
+
 #project .project-content .images,
 #project .project-content .videos,
 #project .project-content .text {
     position: relative;
 }
+
 #project .project-content .images img {
     max-width: 100%;
     height: auto;
     display: block;
 }
+
 #project .project-content .images ul:not(.lSPager) {
     list-style: none;
     width: 100%;
 }
+
 #project .project-content .images ul:not(.lSPager) li {
     width: 100%;
 }
+
 #project .project-content .images .lSPrev,
 #project .project-content .images .lSNext {
     display: block;
@@ -632,14 +724,17 @@ main.loaded #portfolio li.loaded a:hover .title {
     -moz-box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.25);
 }
+
 #project .project-content .images .lSPrev {
     padding: 12px 12.5px;
     left: 30px;
 }
+
 #project .project-content .images .lSNext {
     padding: 12px 13.5px;
     right: 30px;
 }
+
 #project .project-content .images .lSPrev:after,
 #project .project-content .images .lSNext:after {
     font-family: FontAwesome;
@@ -652,13 +747,16 @@ main.loaded #portfolio li.loaded a:hover .title {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 #project .project-content .images .lSNext:after {
     content: '\f054';
 }
+
 #project .project-content .images .lSPrev:hover:after,
 #project .project-content .images .lSNext:hover:after {
     color: rgb(246, 139, 31);
 }
+
 #project .project-content .images .lSSlideOuter .lSPager.lSpg {
     line-height: 0;
     background-color: rgba(255, 255, 255, 0.5);
@@ -670,6 +768,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     left: 50%;
     transform: translateX(-50%) !important;
 }
+
 #project .project-content .videos .embed-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -678,6 +777,7 @@ main.loaded #portfolio li.loaded a:hover .title {
     max-width: 100%;
     height: auto;
 }
+
 #project .project-content .videos .embed-container iframe,
 #project .project-content .videos .embed-container object,
 #project .project-content .videos .embed-container embed {
@@ -687,10 +787,12 @@ main.loaded #portfolio li.loaded a:hover .title {
     width: 100%;
     height: 100%;
 }
+
 #project .project-content .text {
     font-size: 18px;
     line-height: 26px;
 }
+
 .lSSlideOuter .lSPager.lSpg > li a {
     background-color: #1e1e1e;
     -webkit-transition: all 250ms ease;
@@ -699,10 +801,12 @@ main.loaded #portfolio li.loaded a:hover .title {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 .lSSlideOuter .lSPager.lSpg > li:hover a,
 .lSSlideOuter .lSPager.lSpg > li.active a {
     background-color: rgb(246, 139, 31);
 }
+
 footer {
     background-color: #1e1e1e;
     color: #fff;
@@ -716,71 +820,75 @@ footer {
     -o-transition: all 250ms ease;
     transition: all 250ms ease;
 }
+
 footer.reveal {
     opacity: 1;
 }
+
 @media only screen and (max-width: 1340px) {
     .container {
         width: 960px;
     }
+    
     #hero:after,
     #hero .container {
         height: 520px;
     }
+    
     #hero .container .intro {
         width: 620px;
-        font-size: 24px;
-        line-height: 40px;
+        font-size: 22px;
+        line-height: 36px;
         bottom: 134px;
         padding-left: 24px;
     }
+    
     #hero .container .intro .slide-in {
         width: 620px;
     }
+    
     #hero .container .intro strong {
         font-size: 54px;
     }
+    
     #hero .container .intro .drop-down {
-        font-size: 20px;
-        line-height: 42px;
         margin: 0 4px;
-        width: 178px;
-        top: -1px;
     }
-    #hero .container .intro .drop-down:after {
-        top: 18px;
-    }
-    #hero .container .intro .drop-down .options {
-        top: 52px;
-        width: 178px;
-    }
+    
     #hero .container .intro .drop-down .options.open {
         height: 196px;
     }
+    
     #hero .container .intro .drop-down .options li {
         font-size: 20px;
         line-height: 20px;
     }
+    
     #hero .container #hero-photo {
         left: -50px;
     }
+    
     main #portfolio li {
         width: 33.333%;
         height: 240px;
     }
+    
     main #portfolio li a {
         height: 240px;
     }
 }
+
 @media only screen and (max-width: 1040px) {
     .container {
         width: 100%;
         padding: 0 30px;
     }
+    
     #hero:after,
     #hero .container {
         height: 400px;
     }
+    
     #hero .container .intro {
         width: 580px;
         font-size: 16px;
@@ -788,50 +896,53 @@ footer.reveal {
         bottom: 100px;
         padding-left: 14px;
     }
+    
     #hero .container .intro .slide-in {
         width: 580px;
     }
+    
     #hero .container .intro strong {
         font-size: 40px;
     }
+    
     #hero .container .intro .drop-down {
-        font-size: 14px;
-        line-height: 28px;
-        padding: 0 10px 1px 10px;
-        width: 120px;
+        padding: 0 28px 1px 10px;
     }
+    
     #hero .container .intro .drop-down:after {
         border-width: 4px 5px 0 5px;
-        top: 12.5px;
         right: 10px;
     }
-    #hero .container .intro .drop-down .options {
-        width: 120px;
-        top: 38px;
-    }
+    
     #hero .container .intro .drop-down .options.open {
         height: 126px;
         padding: 6px 0 8px 0;
     }
+    
     #hero .container .intro .drop-down .options li {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 14px;
         padding: 4px 14px;
     }
+    
     #hero .container #hero-photo {
         width: 360px;
         left: 80px;
     }
+    
     main #portfolio li {
         width: 50%;
         height: 280px;
     }
+    
     main #portfolio li a {
         height: 280px;
     }
+    
     main #portfolio li a .title {
         padding: 15px 30px;
     }
+    
     main #portfolio li a img,
     main.loaded #portfolio li a:hover img {
         -webkit-transform: scale(1.25) translateY(-18px);
@@ -842,51 +953,64 @@ footer.reveal {
         -webkit-filter: grayscale(0) brightness(1);
         filter: grayscale(0) brightness(1);
     }
+    
     main #portfolio li a .title {
         bottom: 0;
     }
+    
     #project .project-hero .title h2 {
         font-size: 26px;
         line-height: 1.375;
     }
+    
     #project .project-content .text {
         font-size: 16px;
         line-height: 24px;
     }
+    
     #project .project-content .images .lSPrev,
     #project .project-content .images .lSNext {
         display: none;
     }
 }
+
 @media only screen and (max-width: 960px) {
     #hero .container .intro {
         width: 520px;
     }
+    
     #hero .container .intro .drop-down .options.open {
         height: 144px;
     }
+    
     #hero .container .intro .drop-down .options li {
         padding: 6px 14px;
     }
+    
     #hero .container .intro .slide-in {
         width: 520px;
     }
+    
     #hero .container #hero-photo {
         left: 40px;
     }
 }
+
 @media only screen and (max-width: 840px) {
     #hero .container #hero-photo {
         left: -40px;
     }
 }
+
 @media only screen and (max-width: 740px) {
     body {
         font-size: 12px;
     }
+    
     header {
         height: 90px;
     }
+    
     header h1 {
         position: absolute;
         left: 30px;
@@ -901,12 +1025,15 @@ footer.reveal {
         -o-transform: ;
         transform: ;
     }
+    
     header h1.switch {
         left: -200px;
     }
+    
     header h1 .logo {
         height: 33px;
     }
+    
     header nav {
         margin-top: 27px;
         position: absolute;
@@ -922,34 +1049,43 @@ footer.reveal {
         -o-transform: ;
         transform: ;
     }
+    
     header nav ul li {
         margin-left: 6px;
     }
+    
     header nav ul li a,
     header nav ul li a:visited {
         font-size: 11px;
     }
+    
     header nav.switch {
         left: 30px;
     }
+    
     header nav ul li:first-child {
         margin-left: 0;
     }
+    
     header nav ul li a .icon,
     #project .project-hero .title .project-actions a .icon {
         display: none;
     }
+    
     header .mobile-menu {
         display: block;
     }
+    
     #hero:after {
         display: block;
         opacity: 0.25;
     }
+    
     #hero .container.closed {
         height: 400px;
         opacity: 1;
     }
+    
     #hero .container .intro {
         width: 100%;
         bottom: 102px;
@@ -959,16 +1095,20 @@ footer.reveal {
         overflow: visible;
         opacity: 1;
     }
+    
     #hero .container .intro .slide-in {
         width: 100%;
         left: 0;
     }
+    
     #hero .container #hero-photo {
         display: none;
     }
+    
     main #portfolio li {
         height: 240px;
     }
+    
     main #portfolio li a {
         height: 240px;
         opacity: 1;
@@ -979,74 +1119,88 @@ footer.reveal {
         -o-transition: none;
         transition: none;
     }
+    
     #project {
         margin-top: 27px;
         padding: 0 15px;
     }
+    
     #project .project-hero .title {
         padding: 15px;
     }
+    
     #project .project-hero .title .project-actions #info-btn.active:hover {
         color: #1e1e1e;
     }
+    
     #project .project-content {
         margin-bottom: 15px;
     }
+    
     #project .project-content .notes {
         padding: 13px 15px 15px 15px;
     }
+    
     #project .project-content .text {
         font-size: 14px;
         line-height: 20px;
     }
+    
     #project .project-content .images .lSSlideOuter .lSPager.lSpg {
         bottom: 15px;
     }
 }
+
 @media only screen and (max-width: 620px) {
     main #portfolio li,
     main #portfolio li a {
         height: 160px;
     }
+    
     main #portfolio li a .title {
         font-size: 11px;
     }
+    
     main #portfolio li a .year,
     #project .project-hero .title .year {
         display: none;
     }
+    
     #project .project-content .notes .year {
         display: block;
     }
 }
+
 @media only screen and (max-width: 480px) {
     #hero .container .intro {
-        line-height: 16px;
         bottom: 76px;
         padding-right: 30px;
     }
+    
     #hero .container .intro strong {
         line-height: 36px;
         margin-bottom: 10px;
     }
+    
     #hero .container .intro .reponsive-break {
         display: inline;
     }
-    #hero .container .intro .drop-down {
-        top: -5px;
-    }
+    
     main #portfolio li,
     main #portfolio li a {
         height: 200px;
     }
+    
     main #portfolio li {
         width: 100%;
         float: none;
     }
+    
     main #portfolio li a .year {
         display: inline;
     }
 }
+
 @media only print {
     header,
     #hero,
@@ -1054,6 +1208,7 @@ footer.reveal {
     footer {
         display: none !important;
     }
+    
     body:after {
         content: 'Save the trees!';
         display: inline;
@@ -1061,3 +1216,4 @@ footer.reveal {
         font-weight: 700;
     }
 }
+
