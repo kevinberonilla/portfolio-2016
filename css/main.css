@@ -303,15 +303,14 @@ body.ms-browser #hero .container .intro .slide-in {
     font-family: var(--kb-font-stack-display);
     font-size: 64px;
     display: inline-block;
-    margin: 16px 0 14px 0;
+    margin: 16px 0;
     width: 100%;
-    font-weight: 900;
-    text-transform: uppercase;
+    font-weight: 700;
     position: relative;
     left: -2px;
 }
 
-#hero .container .intro .reponsive-break {
+#hero .container .intro .responsive-break {
     display: none;
 }
 
@@ -469,15 +468,6 @@ main.loaded #portfolio li a {
     transition: none;
 }
 
-main #portfolio li a img,
-main #portfolio li a .title {
-    -webkit-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
-    -moz-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
-    -ms-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
-    -o-transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
-    transition: all 250ms cubic-bezier(0.5, 0, 0, 1);
-}
-
 main #portfolio li a img {
     display: block;
     width: 100%;
@@ -485,6 +475,11 @@ main #portfolio li a img {
     object-fit: cover;
     -webkit-filter: grayscale(0.25) brightness(0.75);
     filter: grayscale(0.25) brightness(0.75);
+    -webkit-transition: transform 250ms cubic-bezier(0.5, 0, 0, 1);
+    -moz-transition: transform 250ms cubic-bezier(0.5, 0, 0, 1);
+    -ms-transition: transform 250ms cubic-bezier(0.5, 0, 0, 1);
+    -o-transition: transform 250ms cubic-bezier(0.5, 0, 0, 1);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0, 1);
 }
 
 main #portfolio li a .title {
@@ -499,6 +494,11 @@ main #portfolio li a .title {
     bottom: -100px;
     left: 0;
     width: 100%;
+    -webkit-transition: bottom 250ms cubic-bezier(0.5, 0, 0, 1);
+    -moz-transition: bottom 250ms cubic-bezier(0.5, 0, 0, 1);
+    -ms-transition: bottom 250ms cubic-bezier(0.5, 0, 0, 1);
+    -o-transition: bottom 250ms cubic-bezier(0.5, 0, 0, 1);
+    transition: bottom 250ms cubic-bezier(0.5, 0, 0, 1);
 }
 
 main.loaded #portfolio li a {
@@ -836,7 +836,7 @@ footer.reveal {
     }
     
     #hero .container .intro {
-        width: 620px;
+        width: 600px;
         font-size: 22px;
         line-height: 36px;
         bottom: 134px;
@@ -844,11 +844,12 @@ footer.reveal {
     }
     
     #hero .container .intro .slide-in {
-        width: 620px;
+        width: 600px;
     }
     
     #hero .container .intro strong {
         font-size: 54px;
+        margin: 14px 0;
     }
     
     #hero .container .intro .drop-down {
@@ -890,7 +891,7 @@ footer.reveal {
     }
     
     #hero .container .intro {
-        width: 580px;
+        width: 560px;
         font-size: 16px;
         line-height: 24px;
         bottom: 100px;
@@ -898,11 +899,12 @@ footer.reveal {
     }
     
     #hero .container .intro .slide-in {
-        width: 580px;
+        width: 560px;
     }
     
     #hero .container .intro strong {
         font-size: 40px;
+        margin: 12px 0;
     }
     
     #hero .container .intro .drop-down {
@@ -976,7 +978,7 @@ footer.reveal {
 
 @media only screen and (max-width: 960px) {
     #hero .container .intro {
-        width: 520px;
+        width: 500px;
     }
     
     #hero .container .intro .drop-down .options.open {
@@ -988,7 +990,7 @@ footer.reveal {
     }
     
     #hero .container .intro .slide-in {
-        width: 520px;
+        width: 500px;
     }
     
     #hero .container #hero-photo {
@@ -1179,11 +1181,7 @@ footer.reveal {
     
     #hero .container .intro strong {
         line-height: 36px;
-        margin-bottom: 10px;
-    }
-    
-    #hero .container .intro .reponsive-break {
-        display: inline;
+        margin: 6px 0;
     }
     
     main #portfolio li,
@@ -1197,6 +1195,12 @@ footer.reveal {
     }
     
     main #portfolio li a .year {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    #hero .container .intro .responsive-break {
         display: inline;
     }
 }
